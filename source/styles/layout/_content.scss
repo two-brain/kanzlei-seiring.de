@@ -1,0 +1,45 @@
+.grid-container {
+  @include grid-container;
+  margin: 0 auto;
+  max-width: $grid-width;
+}
+
+// .one-half {
+//   @include grid-media($sixfourty) {
+//     @include grid-column(6);
+//   }
+// }
+
+.one-third {
+  @include grid-media($sixfourty) {
+    @include grid-column(4);
+  }
+}
+
+.one-fourth {
+  @include grid-media($sixfourty) {
+    @include grid-column(3);
+  }
+}
+
+main {
+  background: $light-gray;
+}
+
+.section {
+  &-header {
+    text-align: center;
+    text-transform: uppercase;
+
+    strong {
+      color: $medium-gray;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    h2 {
+      color: $action-color;
+      font-size: 40px;
+    }
+  }
+}

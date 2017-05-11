@@ -1,0 +1,19 @@
+// $inline-list-margin: 16px;
+// $lang-nav-right: 25px - $inline-list-margin;
+
+.nav-lang {
+  float: right;
+  text-transform: uppercase;
+  // position: fixed;
+  // right: $lang-nav-right;
+  // top: 10px;
+
+  .is-active {
+    display: none;
+  }
+
+  // svg {
+  //   border-radius: 50%;
+  //   margin-bottom: -3px;
+  // }
+}

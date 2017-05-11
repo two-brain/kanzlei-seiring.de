@@ -1,0 +1,37 @@
+.hero {
+  $hero-content-padding-bottom: 7 * $base-spacing;
+  $hero-content-padding-left: 4 * $base-spacing;
+
+  background: url('/assets/images/hero-image.jpg');
+  background-position: bottom;
+  background-size: cover;
+  min-height: 40em;
+  position: relative;
+
+  .hero-content {
+    bottom: 0;
+    color: $white;
+    padding-bottom: $hero-content-padding-bottom;
+    padding-left: $hero-content-padding-left;
+    position: absolute;
+  }
+
+  &-bottom {
+    // background: transparent url('/assets/images/hero-bottom.png') repeat-x center 30px;
+    background: transparent url('/assets/images/hero-bottom.svg') repeat-x center 30px;
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.contact-us {
+  margin-top: $base-spacing;
+
+  .button {
+    margin-right: $small-spacing;
+    min-width: 260px;
+  }
+}

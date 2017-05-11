@@ -1,0 +1,33 @@
+*.log
+node_modules
+build/assets
+build/kirby
+build/panel
+
+
+# System files
+# ------------
+
+Icon
+.DS_Store
+
+
+# Temporary files
+# ---------------
+
+build/thumbs/*
+!build/thumbs/index.html
+
+build/site/cache/*
+!build/site/cache/index.html
+
+
+# -------------SECURITY-------------
+# NEVER publish these files via Git!
+# -------------SECURITY-------------
+
+# Kirby accounts
+# ---------------
+
+build/site/accounts/*
+!build/site/accounts/index.html
