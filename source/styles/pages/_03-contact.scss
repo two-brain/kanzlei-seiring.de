@@ -1,0 +1,36 @@
+$section-padding: 4 * $base-spacing;
+
+.contact {
+  background-image: url('/assets/images/unsere-kanzlei.jpg');
+  background-position: bottom;
+  padding: $section-padding 0;
+
+  // List containing various possibilities to get in touch
+  &-option {
+    display: table;
+    width: 100%;
+
+    &-image,
+    &-content {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    &-image {
+      min-width: 2.5em;
+      padding: 0.5em 0;
+      text-align: center;
+
+      svg {
+        color: $action-color;
+        height: 2em;
+        max-width: none;
+      }
+    }
+
+    &-content {
+      padding-left: $small-spacing;
+      width: 100%;
+    }
+  }
+}

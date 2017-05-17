@@ -2,8 +2,8 @@
   <div class="grid-container">
     <nav class="one-third">
       <ul class="nav-meta">
-        <li><a href="#">Datenschutz</a></li>
-        <li><a href="#">Impressum</a></li>
+        <li><a href="<?= page('datenschutz')->url() ?>">Datenschutz</a></li>
+        <li><a href="<?= page('impressum')->url() ?>">Impressum</a></li>
       </ul>
     </nav>
     <div class="one-third center">
@@ -11,7 +11,7 @@
         <?= (new Asset('assets/images/phone-alt2.svg'))->content() ?>
         (0177) 64 322
       </span>
-      <span class="timeline"> · die Nummer für dringende Fälle</span>
+      <span class="timeline"> · in dringenen Fällen für Sie da</span>
     </div>
     <nav class="one-third">
       <ul class="nav-lang">

@@ -3,8 +3,6 @@ $nav-primary-height: 150px;
 $nav-secondary-height: 40px;
 $nav-padding: 1em;
 
-$nav-primary-height-fixed: 100px;
-
 .site-header {
   border-top: 3px solid $action-color;
   color: $dark-gray;
@@ -17,33 +15,6 @@ $nav-primary-height-fixed: 100px;
       color: $action-color;
     }
   }
-}
-
-.logo {
-  float: left;
-  padding-left: $nav-padding;
-
-  svg {
-    max-height: $nav-primary-height;
-    padding: $small-spacing 0;
-    transition: all $base-duration $base-timing;
-
-    // Logo height when page scrolls down
-    .is-fixed & {
-      max-height: $nav-primary-height-fixed;
-    }
-  }
-}
-
-.emergency-phone {
-  color: $action-color;
-  font-weight: 500;
-  text-align: center;
-}
-
-.page-links {
-  float: right;
-  padding-right: $nav-padding;
 }
 
 .nav {
@@ -60,17 +31,27 @@ $nav-primary-height-fixed: 100px;
   &--primary {
     line-height: $nav-primary-height;
     min-height: $nav-primary-height;
-    transition: all $base-duration $base-timing;
     width: 100%;
-    z-index: 999;
-
-    // Nav bar max+line height when page scrolls down
-    &.is-fixed {
-      line-height: $nav-primary-height-fixed;
-      min-height: $nav-primary-height-fixed;
-      position: fixed;
-      top: 0;
-    }
-
   }
+}
+
+.logo {
+  float: left;
+  padding-left: $nav-padding;
+
+  svg {
+    max-height: $nav-primary-height;
+    padding: $small-spacing 0;
+  }
+}
+
+.emergency-phone {
+  color: $action-color;
+  font-weight: 500;
+  text-align: center;
+}
+
+.page-links {
+  float: right;
+  padding-right: $nav-padding;
 }

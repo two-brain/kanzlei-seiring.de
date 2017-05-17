@@ -1,6 +1,6 @@
 <footer class="footer-3" role="contentinfo">
   <div class="footer-logo">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="Logo image">
+    <?= (new Asset("assets/images/logo--dark.svg"))->content() ?>
   </div>
   <div class="footer-links">
     <ul>

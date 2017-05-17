@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.7.1",
+    "bower-webpack-plugin": "^0.1.9",
     "browser-sync": "^2.18.7",
     "eslint-config-google": "^0.7.1",
     "gulp": "github:gulpjs/gulp#4.0",
@@ -50,6 +51,7 @@
     "stylelint": "^7.7.1",
     "stylelint-config-sass-guidelines": "^1.1.1",
     "vinyl-named": "^1.1.0",
+    "webpack": "^2.5.1",
     "webpack-stream": "^3.2.0"
   },
   "stylelint": {
@@ -65,5 +67,13 @@
       "browser": true
     },
     "rules": {}
+  },
+  "dependencies": {
+    "gulp-rsync": "^0.0.7",
+    "gumshoe": "cferdinandi/gumshoe",
+    "headhesive": "^1.2.4",
+    "smooth-scroll": "cferdinandi/smooth-scroll",
+    "van11y-accessible-accordion-aria": "^1.0.5",
+    "vinyl-ftp": "^0.6.0"
   }
 }

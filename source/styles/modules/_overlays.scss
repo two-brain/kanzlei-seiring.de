@@ -1,0 +1,37 @@
+$overlay-opacity: 0.9;
+$overlay-opacity--blue: 0.25;
+
+.overlay {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+
+  &::after {
+    background: $light-gray;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: $overlay-opacity;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &--blue {
+    strong {
+      color: $white;
+    }
+
+    &::after {
+      background: $action-color;
+      opacity: $overlay-opacity--blue;
+    }
+  }
+
+  .section-header,
+  .grid-container {
+    position: relative;
+    z-index: 5;
+  }
+}
