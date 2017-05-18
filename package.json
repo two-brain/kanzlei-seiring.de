@@ -72,7 +72,6 @@
     "gulp-rsync": "^0.0.7",
     "gumshoe": "cferdinandi/gumshoe",
     "headhesive": "^1.2.4",
-    "smooth-scroll": "cferdinandi/smooth-scroll",
     "van11y-accessible-accordion-aria": "^1.0.5",
     "vinyl-ftp": "^0.6.0"
   }

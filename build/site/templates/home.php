@@ -63,37 +63,6 @@
   <section class="section dummy">
     <h1>ACCORDION!</h1>
 
-    <div class="grid-container">
-
-<div class="squeezebox">
-  <header class="squeezhead">
-		<p>header</p>
-	</header>
-	<div class="squeezecnt">
-		<p>content</p>
-	</div>
-  <header class="squeezhead">
-		<p>header</p>
-	</header>
-	<div class="squeezecnt">
-		<p>content</p>
-	</div>
-  <header class="squeezhead">
-		<p>header</p>
-	</header>
-	<div class="squeezecnt">
-		<p>content</p>
-	</div>
-  <header class="squeezhead">
-		<p>header</p>
-	</header>
-	<div class="squeezecnt">
-		<p>content</p>
-	</div>
-</div>
-
-    </div>
-
     <h2>Philosophie</h2>
     <p>Wir bieten eine fundierte und diskrete Bearbeitung Ihrer Rechtsprobleme. Dabei kann auf jahrelange Praxis, die durch ständige Fortbildungen erweitert wird, zurückgegriffen werden. Auf dieses Wissen können Sie vertrauen.</p>
 
