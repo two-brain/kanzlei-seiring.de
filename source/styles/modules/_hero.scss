@@ -2,7 +2,7 @@
   $hero-content-padding-bottom: 7 * $base-spacing;
   $hero-content-padding-left: 4 * $base-spacing;
 
-  background: url('/assets/images/hero-image.jpg');
+  background: url('/assets/images/bg_hero.jpg');
   background-position: bottom;
   background-size: cover;
   min-height: 40em;
@@ -17,8 +17,7 @@
   }
 
   &-bottom {
-    // background: transparent url('/assets/images/hero-bottom.png') repeat-x center 30px;
-    background: transparent url('/assets/images/hero-bottom.svg') repeat-x center 30px;
+    background: transparent url('/assets/images/hero_bottom.svg') repeat-x center 30px;
     bottom: 0;
     height: 50px;
     left: 0;

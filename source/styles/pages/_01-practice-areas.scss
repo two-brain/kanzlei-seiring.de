@@ -1,8 +1,6 @@
-$section-padding: 5 * $base-spacing;
-
 .practice-areas {
   background: $white;
-  padding: $section-padding 0;
+  padding: $section-padding;
   text-align: center;
 
   img {
@@ -11,6 +9,18 @@ $section-padding: 5 * $base-spacing;
 
   h3 {
     color: $action-color;
-    font-weight: 400;
+    font-weight: $heading-font-weight--light;
+    margin: 1em 0 0.5em;
+  }
+
+  .lets-help {
+    display: table;
+    margin: 0 auto;
+
+    strong {
+      font-size: 1.125rem;
+      display: inline-block;
+      padding: 3 * $base-spacing 0 $base-spacing;
+    }
   }
 }

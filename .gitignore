@@ -1,8 +1,10 @@
 *.log
 node_modules
+workbench
 build/assets
 build/kirby
 build/panel
+build/site/config/config.kanzlei-seiring.de.php
 
 
 # System files

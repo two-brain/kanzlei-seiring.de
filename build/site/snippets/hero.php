@@ -7,13 +7,12 @@
         Wir nehmen uns Zeit für Ihr Anliegen, sprechen Sie uns an!
       </p>
       <p class="contact-us">
-        <a class="button" href="mailto:info@kanzlei-seiring.de">
-          <?= (new Asset('assets/images/mail.svg'))->content() ?>
-          info@kanzlei-seiring.de
+        <a class="button" href="mailto:<?= $site->mail()->html() ?>">
+          <?= (new Asset('assets/images/icons/mail.svg'))->content() ?>
+          <?= $site->mail()->html() ?>
         </a>
-        <a class="button transparent" href="tel:+4976172523">
-          <?= (new Asset('assets/images/phone-alt2.svg'))->content() ?>
-          (0761) 72 523
+        <a data-scroll class="button transparent" href="#practice-areas">
+          Lernen Sie uns kennen!
         </a>
       </p>
     </div>

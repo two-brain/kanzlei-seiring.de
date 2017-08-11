@@ -3,11 +3,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
+  <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
 
-  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:300,500,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600' rel='stylesheet' type='text/css'>
 
   <?= css('assets/styles/main.css'); ?>
+
+  <?php if(c::get('piwik_enable') == true) : ?>
+    <?php snippet('piwik') ?>
+  <?php endif ?>
 
 </head>

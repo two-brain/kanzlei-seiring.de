@@ -6,35 +6,26 @@
 
 require('./partials/feature-detection.js');
 
-// Options
+/* HEADHESIVE.JS */
+
 var options = {
-  // Custom classes
   classes: {
-
-    // Cloned elem class
     clone: 'doppelganger',
-
-    // Stick class
     stick: 'is-sticky',
-
-    // Unstick class
     unstick: 'is-unsticky',
   },
-  offset: 500,
+  offset: 400,
 };
 
-
 var Headhesive = require('headhesive');
-// Create a new instance of Headhesive.js and pass in some options
 var header = new Headhesive('#js-sticky-nav', options);
 
+
+/* SMOOTHSCROLL */
 
 var smoothScroll = require('smooth-scroll');
 
 smoothScroll.init({
   selectorHeader: '#js-sticky-nav',
+  offset: -100,
 });
-
-var gumshoe = require('gumshoe');
-
-gumshoe.init();

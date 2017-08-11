@@ -1,12 +1,12 @@
 $nav-primary-height-fixed: 100px;
 
 .doppelganger {
-  line-height: $nav-primary-height-fixed;
-  min-height: $nav-primary-height-fixed;
+  // line-height: $nav-primary-height-fixed;
+  // min-height: $nav-primary-height-fixed;
   position: fixed;
   top: 0;
   transform: translateY(-100%);
-  transition: all 300ms ease-in-out;
+  transition: all 400ms ease-in-out;
   z-index: 999;
 
   svg {

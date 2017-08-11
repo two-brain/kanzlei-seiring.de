@@ -1,0 +1,18 @@
+$overlay-opacity: 0.3;
+
+.contact {
+  background-image: url('/assets/images/bg_contact.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: $section-padding;
+}
+
+.one-half {
+  padding: 2em $base-spacing;
+  position: relative;
+  background: rgba($white, $overlay-opacity);
+
+  @include grid-media($large) {
+    @include grid-push(6);
+  }
+}

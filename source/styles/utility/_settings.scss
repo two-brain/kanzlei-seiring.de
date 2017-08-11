@@ -16,13 +16,21 @@ $sixfourty: (
   media: $medium-screen
 );
 
+$large: (
+  columns: 12,
+  gutter: 20px,
+  media: $large-screen
+);
+
 $grid-width: 1200px;
 
 // Typography
 $base-font-family: 'Fira Sans', sans-serif;
 $heading-font-family: Montserrat, sans-serif;
-$base-font-weight: 400;
-$heading-font-weight: 700;
+$base-font-weight: 300;
+$base-font-weight-bold: 500;
+$heading-font-weight: 600;
+$heading-font-weight--light: 400;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -40,14 +48,15 @@ $base-z-index: 0;
 // Colors
 $white: #fff;
 $blue: #2196f3;
+$dark-blue: darken($blue, 10%);
 $dark-gray: #334553;
 $medium-gray: lighten($dark-gray, 55%);
-$light-gray: #f8fafc;
+$light-gray: lighten($dark-gray, 70%);
 
 // Font Colors
 $base-font-color: $dark-gray;
 $action-color: $blue;
-$secondary-color: darken($action-color, 10%);
+$secondary-color: $dark-blue;
 
 // Border
 $base-border-color: $medium-gray;

@@ -1,5 +1,5 @@
 $overlay-opacity: 0.9;
-$overlay-opacity--blue: 0.25;
+$overlay-opacity--dark: 0.65;
 
 .overlay {
   background-repeat: no-repeat;
@@ -18,14 +18,14 @@ $overlay-opacity--blue: 0.25;
     width: 100%;
   }
 
-  &--blue {
+  &--dark {
     strong {
       color: $white;
     }
 
     &::after {
-      background: $action-color;
-      opacity: $overlay-opacity--blue;
+      background: $dark-gray;
+      opacity: $overlay-opacity--dark;
     }
   }
 

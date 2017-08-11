@@ -1,5 +1,5 @@
 $nav-background: $white;
-$nav-primary-height: 150px;
+$nav-primary-height: 125px;
 $nav-secondary-height: 40px;
 $nav-padding: 1em;
 
@@ -40,14 +40,14 @@ $nav-padding: 1em;
   padding-left: $nav-padding;
 
   svg {
-    max-height: $nav-primary-height;
-    padding: $small-spacing 0;
+    // max-height: $nav-primary-height;
+    // padding: $small-spacing 0;
   }
 }
 
 .emergency-phone {
   color: $action-color;
-  font-weight: 500;
+  font-weight: $base-font-weight-bold;
   text-align: center;
 }
 

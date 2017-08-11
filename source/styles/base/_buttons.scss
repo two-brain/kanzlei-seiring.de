@@ -10,7 +10,7 @@
   font-family: $base-font-family;
   font-size: $base-font-size;
   -webkit-font-smoothing: antialiased;
-  font-weight: 600;
+  font-weight: $base-font-weight-bold;
   line-height: 1;
   padding: $small-spacing $base-spacing;
   text-align: center;
@@ -38,7 +38,7 @@
   &.transparent {
     background: transparent;
     border: 0.125em solid $white;
-    padding: $small-spacing - 0.125em $base-spacing - 0.125em;
+    padding: $small-spacing + 0.056em $base-spacing + 0.056em;
     transition: color background-color $base-duration $base-timing;
 
     &:hover,

@@ -4,25 +4,33 @@
   max-width: $grid-width;
 }
 
-.one-half {
-  @include grid-media($sixfourty) {
-    @include grid-column(5);
-
-    & + & {
-      @include grid-column(6);
-      @include grid-push(1);
-    }
-  }
-}
+// .one-half {
+//   padding: 2em $base-spacing;
+//
+//   @include grid-media($large) {
+//     @include grid-column(6);
+//   }
+// }
 
 .one-third {
-  @include grid-media($sixfourty) {
+  @include grid-media($large) {
     @include grid-column(4);
   }
 }
 
+.two-thirds {
+  @include grid-media($large) {
+    @include grid-column(7);
+    @include grid-push(1);
+  }
+}
+
 .one-fourth {
-  @include grid-media($sixfourty) {
+  @include grid-media($large) {
+    @include grid-column(6);
+  }
+
+  @include grid-media($neat-grid) {
     @include grid-column(3);
   }
 }
@@ -37,7 +45,6 @@ main {
 
   h1 {
     color: $white;
-    // font-variant: small-caps;
     margin: 0;
     text-transform: uppercase;
   }
@@ -47,87 +54,7 @@ main {
   padding: 2 * $base-spacing 0;
 }
 
-
-
-
-
-$main: #289487; //#34A396;
-$light-blue: lighten($main, 10%);
-$codebkg : #323F3D;
-$headers : #5A6664; //#635C6B;
-$text-color: #5E757F;
-$bkg: #ccc;
-$light-contrast: darken($bkg, 30%);
-
-// brauchen clearfix!
-.squeezhead, .myheader{
-	background: $headers;
-	border: 1px solid $bkg;
-	padding: 6px;
-	color: $bkg;
-	position: relative;
-	cursor: pointer;
-	&:hover{
-		background: darken($headers, 2%);
-	}
-	p{
-		margin: 5px 15px;
-	}
-	.icon-arrow-right{
-		transition: all 0.7s ease;
-		transform: rotate(-90deg);
-		@extend .no-flick;
-		font-size: 1.5em;
-		display: inline-block;
-		top: 13px;
-		right: 15px;
-		position: absolute;
-	}
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-.squeezecnt, .mycontent{
-	background: #ACB6B4;
-	padding: 20px;
-	p{
-		margin: 0;
-	}
-}
-
-
-.accordion_open{
-	.icon-arrow-right{
-		transform: rotate(90deg);
-	}
-}
-
-.no-flick{
-	-webkit-transform:translate3d(0,0,0);
-	-webkit-transform-style: preserve-3d;
-	-webkit-perspective: 1000;
-	-webkit-backface-visibility: hidden;
-}
-
-[class^="accordion-"], [class*=" accordion-"]{
-	width: 100%;
-	margin: 20px auto;
-	position: relative;
-	border-radius: 10px;
-	overflow: hidden;
-	-webkit-transform: translate(0);
-	@extend .no-flick;
-}
-
-
-
-[class^="accordion-"], [class*=" accordion-"] {
-  width: 100%;
-  margin: 20px auto;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  -webkit-transform: translate(0);
+.section {
+  @include grid-container;
+  clear: both;
 }

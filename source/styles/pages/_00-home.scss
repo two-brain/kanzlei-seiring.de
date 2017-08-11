@@ -1,3 +1,5 @@
+$section-padding: 6 * $base-spacing 0;
+
 .section {
   &-header {
     @include grid-container;
@@ -7,7 +9,7 @@
     strong {
       color: $medium-gray;
       font-size: 16px;
-      font-weight: 700;
+      font-weight: $base-font-weight-bold + 200;
     }
 
     h2 {
