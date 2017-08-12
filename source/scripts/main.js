@@ -4,24 +4,19 @@
  * Loading main js files
  */
 
-require('./partials/feature-detection.js');
-
-/* HEADHESIVE.JS */
-
-var options = {
-  classes: {
-    clone: 'doppelganger',
-    stick: 'is-sticky',
-    unstick: 'is-unsticky',
-  },
-  offset: 400,
-};
-
-var Headhesive = require('headhesive');
-var header = new Headhesive('#js-sticky-nav', options);
+import featureDetection from './partials/featureDetection';
+import headHesive from './partials/headHesive';
 
 
-/* SMOOTHSCROLL */
+/*
+ * Loading scripts
+ */
+
+featureDetection();
+headHesive();
+
+
+/* SMOOTHSCROLL - keep in mind: breaking changes in next version */
 
 var smoothScroll = require('smooth-scroll');
 
