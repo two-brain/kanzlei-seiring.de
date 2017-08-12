@@ -12,7 +12,7 @@
           <?= $site->mail()->html() ?>
         </a>
         <a data-scroll class="button transparent" href="#practice-areas">
-          Lernen Sie uns kennen!
+          Hier erfahren Sie mehr ↓
         </a>
       </p>
     </div>

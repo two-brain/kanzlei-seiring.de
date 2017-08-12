@@ -7,19 +7,32 @@ $icon-bullet-size: 3.5em;
   margin-bottom: 1em * $base-line-height;
   overflow: auto;
   padding: 0;
+}
 
-  // li {
-  //   list-style: none;
-  // }
+.bullet-date {
+  padding: $small-spacing;
+  background: $white;
+  border-width: 1px 1px 1px 10px;
+  border-style: solid;
+  border-color: $medium-gray;
+  margin-top: $base-spacing;
+  transition: $base-duration $base-timing;
 
-  // p {
-  //   color: $base-font-color;
-  //   line-height: $base-line-height;
-  // }
+  &:hover {
+    background: $medium-gray;
+
+    h3 {
+      color: $action-color;
+    }
+  }
+
+  p {
+    color: $base-font-color;
+  }
 }
 
 .bullet {
-  flex-basis: 25em;
+  flex-basis: 30em;
   flex-grow: 1;
 
   &-icon {
@@ -34,7 +47,6 @@ $icon-bullet-size: 3.5em;
   $date-line-height: 1rem;
   $date-font-size: 2rem;
   $date-bullet-size: 2em;
-
 
   .date-icon {
     text-align: center;
@@ -66,19 +78,20 @@ $icon-bullet-size: 3.5em;
   }
 
   .date-content {
-    // margin-bottom: 2em;
     margin-left: 2 * $date-bullet-size;
     padding: 0 $base-spacing;
   }
 
   h3 {
-    // color: $secondary-color;
-    display: inline-block;
+    // display: inline-block;
     font-size: $icon-bullet-size / 2.5;
     font-family: $heading-font-family;
     font-weight: $heading-font-weight--light;
     margin: 0 0 ($icon-bullet-size / 20) 0;
-    // padding-top: $icon-bullet-size / 7;
+  }
+
+  p:last-child {
+    margin: 0;
   }
 
   svg {

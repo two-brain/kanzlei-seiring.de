@@ -5,55 +5,67 @@
   <section id="practice-areas" class="section practice-areas">
     <div class="grid-container">
       <header class="section-header">
-        <strong>Ihr Partner im Strafrecht</strong>
+        <strong>Ihr Partner in Rechtsfragen</strong>
         <h2>Unsere Fachgebiete</h2>
       </header>
       <div class="carousel">
-        <div class="one-fourth">
-          <img src="assets/images/practice-areas_youth.png" alt="">
-          <h3>Jugendstrafrecht</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ante massa, at lacinia dolor ultrices in.
-          </p>
+        <div class="slider">
+          <div>
+            <img src="assets/images/practice-areas_youth.png" alt="">
+            <h3>Jugendstrafrecht</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ante massa, at lacinia dolor ultrices in.
+            </p>
+          </div>
+          <div>
+            <img src="assets/images/practice-areas_petty.png" alt="">
+            <h3>Ordnungswidrigkeiten</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ante massa, at lacinia dolor ultrices in.
+            </p>
+          </div>
+          <div>
+            <img src="assets/images/practice-areas_drugs.png" alt="">
+            <h3>Betäubungsmittelstrafrecht</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ante massa, at lacinia dolor ultrices in.
+            </p>
+          </div>
+          <div>
+            <img src="assets/images/practice-areas_traffic.png" alt="">
+            <h3>Verkehrsstrafrecht</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ante massa, at lacinia dolor ultrices in.
+            </p>
+          </div>
         </div>
-        <div class="one-fourth">
-          <img src="assets/images/practice-areas_petty.png" alt="">
-          <h3>Ordnungswidrigkeiten</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ante massa, at lacinia dolor ultrices in.
-          </p>
-        </div>
-        <div class="one-fourth">
-          <img src="assets/images/practice-areas_drugs.png" alt="">
-          <h3>Betäubungsmittelstrafrecht</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ante massa, at lacinia dolor ultrices in.
-          </p>
-        </div>
-        <div class="one-fourth">
-          <img src="assets/images/practice-areas_traffic.png" alt="">
-          <h3>Verkehrsstrafrecht</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ante massa, at lacinia dolor ultrices in.
-          </p>
+        <div class="slider-controls">
+          <button class="bullet-icon" type="button">
+            <?= (new Asset("assets/images/icons/chevron-left.svg"))->content() ?>
+            <span class="sr-only">Zurück</span>
+          </button>
+          <button class="bullet-icon" type="button">
+            <?= (new Asset("assets/images/icons/chevron-right.svg"))->content() ?>
+            <span class="sr-only">Weiter</span>
+          </button>
         </div>
       </div>
+
+
+
       <div class="lets-help">
         <strong>Sie sind sich bei der Einordnung unsicher?</strong><br>
         <a class="button" href="<?= page('unsere-leistungen')->url() ?>">Wir sind behilflich →</a>
       </div>
-
     </div>
   </section>
 
   <section id="about-us" class="section about-us overlay overlay--dark">
     <div class="grid-container">
-
       <header class="section-header">
         <strong>Wir stellen uns vor</strong>
         <h2>Unsere Kanzlei</h2>
       </header>
-
       <ul class="bullets">
         <li class="bullet">
           <div class="bullet-icon">
@@ -93,13 +105,12 @@
           </div>
           <div class="bullet-content">
             <h3>Zu Ihrer Zufriedenheit</h3>
-            <p>Die Kanzlei befindet sich in Innenstadtnähe von Freiburg im schönen Altbauviertel Wiehre. Kostenlose Mandantenparkplätze stehen vor dem Haus zur Verfügung, sowie in 200 m die Haltestelle „Brauerei Ganter“ der Straßenbahnlinie 1.</p>
+            <p>Die Kanzlei befindet sich in Innenstadtnähe von Freiburg im schönen Altbauviertel Wiehre.</p>
+            <p>Kostenlose Mandantenparkplätze stehen vor dem Haus zur Verfügung, sowie in 200 m die Haltestelle „Brauerei Ganter“ der Straßenbahnlinie 1.</p>
           </div>
           <a class="button transparent" href="<?= page('ueber-uns')->url() ?>" style="float: right; margin-right: 2em;">Lernen Sie uns kennen →</a>
         </li>
       </ul>
-
-
     </div>
   </section>
 
@@ -113,33 +124,24 @@
         <p>Hier finden Sie Informationen über aktuelle Entwicklungen in Rechtsprechung und Lehre. Außerdem stellen wir in unserem Archiv alle Materialien für die Studenten der DHBW Lörrach zur Verfügung.</p>
         <a class="button" href="<?= page('forschung-und-lehre')->url() ?>" style="margin-top: 1em;">Zum Archiv →</a>
       </div>
-
       <div class="two-thirds">
         <div class="bullets">
-          <div class="bullet">
-            <div class="date-icon">
-              <time>
-                01<br>
-                <span>Nov</span>
-              </time>
-            </div>
-            <div class="date-content">
-              <h3>Wichtige Dokumente!</h3>
-              <p>Wahl-, Pflichtverteidigung, jede Prozesssituation, AG/LG/OLG! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum.</p>
-            </div>
-          </div>
-          <div class="bullet">
-            <div class="date-icon">
-              <time>
-                01<br>
-                <span>Nov</span>
-              </time>
-            </div>
-            <div class="date-content">
-              <h3>Wichtige Dokumente!</h3>
-              <p>Wahl-, Pflichtverteidigung, jede Prozesssituation, AG/LG/OLG! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum.</p>
-            </div>
-          </div>
+          <?php foreach(page('forschung-und-lehre')->children()->visible()->flip()->limit(2) as $article) : ?>
+          <a class="bullet-date" href="<?= $article->url() ?>">
+            <article class="bullet">
+              <div class="date-icon">
+                <time datetime="<?= $article->date('%Y-%m-%d') ?>">
+                  <?= $article->date('%d'); ?><br>
+                  <span><?= $article->date('%b'); ?></span>
+                </time>
+              </div>
+              <div class="date-content">
+                <h3><?= $article->title()->html() ?></h3>
+                <?= $article->intro()->kirbytext() ?>
+              </div>
+            </article>
+          </a>
+          <?php endforeach ?>
         </div>
       </div>
     </div>

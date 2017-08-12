@@ -1,22 +1,20 @@
-title: Page
+title: Beitrag
 
-pages: true
-  template: article
-  sort: flip
-  num: date
+pages: false
 files: true
-options:
-  preview: true
-  status: false
-  template: false
-  url: false
-  delete: false
-
 
 fields:
   title:
     label: Title
     type:  text
+    width: 2/3
+  date:
+    label:  Date
+    type:   date
+    default: today
+    format: DD.MM.YYYY
+    width:  1/3
+
   intro:
     label: Einleitung
     type:  textarea

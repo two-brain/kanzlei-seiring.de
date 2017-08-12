@@ -33,6 +33,7 @@ a {
   color: $action-color;
   text-decoration: none;
   transition: color $base-duration $base-timing;
+  outline: 0;
 
   &:active,
   &:focus,
@@ -41,19 +42,19 @@ a {
   }
 }
 
-hr {
-  border-bottom: $base-border;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  margin: $base-spacing auto;
-}
+// hr {
+//   border-bottom: $base-border;
+//   border-left: 0;
+//   border-right: 0;
+//   border-top: 0;
+//   margin: $base-spacing auto;
+// }
 
-address {
-  font-size: 1.125rem;
-  font-style: normal;
-  margin: 0 0 $small-spacing;
-}
+// address {
+//   font-size: 1.125rem;
+//   font-style: normal;
+//   margin: 0 0 $small-spacing;
+// }
 
 .lead {
   font-size: 125%;
@@ -62,4 +63,12 @@ address {
 
 .center {
   text-align: center;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0px, 0px, 0px, 0px);
 }

@@ -25,19 +25,19 @@
   }
 }
 
-.one-fourth {
-  @include grid-media($large) {
-    @include grid-column(6);
-  }
+// .one-fourth {
+//   @include grid-media($large) {
+//     @include grid-column(6);
+//   }
+//
+//   @include grid-media($neat-grid) {
+//     @include grid-column(3);
+//   }
+// }
 
-  @include grid-media($neat-grid) {
-    @include grid-column(3);
-  }
-}
-
-main {
-  background: $light-gray;
-}
+// main {
+//   background: $light-gray;
+// }
 
 .page-title {
   background: $medium-gray;

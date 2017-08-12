@@ -1,0 +1,33 @@
+.carousel {
+  position: relative;
+
+  .bullet-icon {
+    background: $medium-gray;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.slider-controls {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  outline: 0;
+
+  button {
+    position: relative;
+  }
+
+  [data-controls="prev"] {
+    float: left;
+    left: -20px;
+  }
+
+  [data-controls="next"] {
+    float: right;
+    right: -20px;
+  }
+}

@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "headhesive": "^1.2.4",
-    "smooth-scroll": "cferdinandi/smooth-scroll"
+    "smooth-scroll": "cferdinandi/smooth-scroll",
+    "tiny-slider": "^1.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
