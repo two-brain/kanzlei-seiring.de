@@ -3,7 +3,7 @@
 
   <?php snippet('head') ?>
 
-  <body>
+  <body id="start">
     <header id="header" class="site-header" role="banner">
 
       <nav class="nav nav--secondary" role="navigation">
@@ -44,7 +44,7 @@
             <ul>
               <?php foreach($pages->visible() as $item) : ?>
                 <li>
-                  <a href="<?= $item->url() ?>">
+                  <a<?php e($item->isOpen(), ' class="is-active"') ?> href="<?= $item->url() ?>">
                     <?= $item->title()->html() ?>
                   </a>
                 </li>

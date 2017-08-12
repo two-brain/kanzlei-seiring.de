@@ -11,7 +11,7 @@
           <?= (new Asset('assets/images/icons/mail.svg'))->content() ?>
           <?= $site->mail()->html() ?>
         </a>
-        <a data-scroll class="button transparent" href="#practice-areas">
+        <a class="button transparent" href="#services">
           Hier erfahren Sie mehr ↓
         </a>
       </p>

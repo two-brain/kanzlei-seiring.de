@@ -1,4 +1,9 @@
 $footer-background: $dark-gray;
+$footer-color: transparentize($white, 0.6);
+$footer-color--hover: transparentize($white, 0.25);
+$footer-hr-width: 12em;
+$footer-hr-spacing: 2em;
+$back-top-bullet-size: 3.5em;
 
 .site-footer {
   background: $footer-background;
@@ -21,10 +26,6 @@ $footer-background: $dark-gray;
   }
 }
 
-
-
-$back-top-bullet-size: 3.5em;
-
 .back-top {
   position: absolute;
   left: 50%;
@@ -39,50 +40,27 @@ $back-top-bullet-size: 3.5em;
 }
 
 
+.footer {
+  &--primary {
+    background: $footer-background;
+    padding: $base-spacing * 3;
+    width: 100%;
+    text-align: center;
 
+    hr {
+      border: 1px solid transparentize($footer-color, 0.3);
+      margin: $footer-hr-spacing auto;
+      width: $footer-hr-width;
+    }
 
-.footer--primary {
-  $footer-color: transparentize($white, 0.6);
-  $footer-hr-width: 12em;
-  $footer-hr-spacing: 2em;
-
-  background: $footer-background;
-  padding: $base-spacing * 3;
-  width: 100%;
-  text-align: center;
-
-  hr {
-    border: 1px solid transparentize($footer-color, 0.3);
-    margin: $footer-hr-spacing auto;
-    width: $footer-hr-width;
+    p {
+      color: $footer-color;
+      margin: 0;
+      // font-size: 0.9em;
+    }
   }
 
-  p {
-    color: $footer-color;
-    margin: 0;
-    // font-size: 0.9em;
-  }
-}
-
-
-
-
-
-
-
-
-.footer-2 {
-  $action-color: #477DCA !default;
-  $medium-screen: 40em !default;
-  $footer-color: transparentize($white, 0.6);
-  $footer-color--hover: transparentize($white, 0.25);
-
-  background: $footer-background;
-  display: inline-block;
-  padding: $small-spacing $base-spacing;
-  width: 100%;
-
-  .footer-logo {
+  &-logo {
     margin-bottom: 1em;
     margin-right: 1em;
     text-align: center;
@@ -93,11 +71,14 @@ $back-top-bullet-size: 3.5em;
     }
   }
 
-  .footer-logo img {
-    height: 1.6em;
+  &--secondary {
+    background: $footer-background;
+    display: inline-block;
+    padding: $small-spacing $base-spacing;
+    width: 100%;
   }
 
-  ul {
+  &-links {
     line-height: 1.5em;
     margin: 0 0 1em 0;
     padding: 0;
@@ -109,35 +90,39 @@ $back-top-bullet-size: 3.5em;
       margin-bottom: 0;
       margin-left: 1em;
     }
-  }
-
-  ul li {
-    list-style: none;
-    padding-right: 1em;
-
-    @include grid-media($neat-grid) {
-      display: inline;
-      text-align: left;
-    }
-  }
-
-  ul li a {
-    color: $footer-color;
-    text-decoration: none;
-
-    &:focus,
-    &:hover {
-      color: $footer-color--hover;
-    }
-  }
-
-  .footer-secondary-links {
-    @include grid-media($neat-grid) {
-      float: right;
-    }
 
     li {
-      // font-size: 0.9em;
+      list-style: none;
+      padding-right: 1em;
+
+      @include grid-media($neat-grid) {
+        display: inline;
+        text-align: left;
+      }
+    }
+
+    a {
+      color: $footer-color;
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        color: $footer-color--hover;
+      }
+    }
+
+    &--secondary {
+      @include grid-media($neat-grid) {
+        float: right;
+      }
+
+      li {
+        font-size: 0.9em;
+
+        @include grid-media($neat-grid) {
+          font-size: 1em;
+        }
+      }
     }
   }
 }

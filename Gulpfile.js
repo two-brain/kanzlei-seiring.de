@@ -29,7 +29,8 @@ var
   stylelint     = require('stylelint'),
   syntax_scss   = require('postcss-scss'),
   uglify        = require('gulp-uglify'),
-  webpack       = require('webpack-stream')
+  webpack       = require('webpack-stream'),
+  UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 ;
 
 
@@ -108,8 +109,13 @@ gulp.task('make:scripts', function() {
 
   return gulp.src(config.assets.source + '/scripts/main.js')
     .pipe(named())
-    .pipe(webpack({watch: false}))
-    .pipe(gulpif(!development, uglify()))
+    .pipe(webpack({
+      watch: false,
+      plugins: [
+        // new UglifyJSPlugin()
+      ]
+    }))
+    // .pipe(gulpif(!development, uglify()))
     .pipe(size({gzip: true, showFiles: true}))
     .pipe(gulp.dest(config.assets.build + '/scripts'))
     .pipe(browserSync.stream())

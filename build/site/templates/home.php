@@ -2,7 +2,7 @@
 
   <?php snippet('hero'); ?>
 
-  <section id="practice-areas" class="section practice-areas">
+  <section id="services" class="section services">
     <div class="grid-container">
       <header class="section-header">
         <strong>Ihr Partner in Rechtsfragen</strong>
@@ -30,9 +30,6 @@
           </button>
         </div>
       </div>
-
-
-
       <div class="lets-help">
         <strong>Sie sind sich bei der Einordnung unsicher?</strong><br>
         <a class="button" href="<?= page('unsere-leistungen')->url() ?>">Wir sind behilflich →</a>

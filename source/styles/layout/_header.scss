@@ -54,4 +54,12 @@ $nav-padding: 1em;
 .page-links {
   float: right;
   padding-right: $nav-padding;
+
+  a {
+    font-weight: 400;
+  }
+
+  .is-active {
+    color: $action-color;
+  }
 }

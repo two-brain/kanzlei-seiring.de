@@ -1,4 +1,5 @@
 /* Simple JS feature detection */
+
 export default function featureDetection() {
   let className = '';
   let html = '';

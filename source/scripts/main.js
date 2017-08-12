@@ -7,6 +7,7 @@
 import featureDetection from './partials/featureDetection';
 import headHesive from './partials/headHesive';
 import tinySlider from './partials/tinySlider';
+import smoothScroll from './partials/smoothScroll';
 
 
 /*
@@ -16,13 +17,4 @@ import tinySlider from './partials/tinySlider';
 featureDetection();
 headHesive();
 tinySlider();
-
-
-/* SMOOTHSCROLL - keep in mind: breaking changes in next version */
-
-// var smoothScroll = require('smooth-scroll');
-//
-// smoothScroll.init({
-//   selectorHeader: '#js-sticky-nav',
-//   offset: -100,
-// });
+smoothScroll();
