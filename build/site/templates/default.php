@@ -2,13 +2,13 @@
 
   <div class="page-title">
     <div class="grid-container">
-      <h1><?= $page->title()->html() ?></h1>
+      <h1><?= $page->title() ?></h1>
     </div>
   </div>
   <div class="page-content">
     <div class="grid-container">
-      <?= $page->intro()->kirbytext() ?>
-      <?= $page->text()->kirbytext() ?>
+      <?= $page->intro()->kt() ?>
+      <?= $page->text()->kt() ?>
     </div>
   </div>
 

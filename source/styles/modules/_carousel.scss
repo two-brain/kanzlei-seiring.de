@@ -1,12 +1,17 @@
+$slider-controls-top: 20%;
+$slider-controls-side: -20px;
+$slider-controls-opacity: 0.3;
+$slider-controls-opacity--hover: 1;
+
 .carousel {
   position: relative;
 
   .bullet-icon {
     background: $medium-gray;
-    opacity: 0.3;
+    opacity: $slider-controls-opacity;
 
     &:hover {
-      opacity: 1;
+      opacity: $slider-controls-opacity--hover;
     }
   }
 }
@@ -14,7 +19,7 @@
 .slider-controls {
   width: 100%;
   position: absolute;
-  top: 20%;
+  top: $slider-controls-top;
   outline: 0;
 
   button {
@@ -23,11 +28,16 @@
 
   [data-controls="prev"] {
     float: left;
-    left: -20px;
+    left: $slider-controls-side;
   }
 
   [data-controls="next"] {
     float: right;
-    right: -20px;
+    right: $slider-controls-side;
   }
+}
+
+[data-action="start"],
+[data-action="stop"] {
+  display: none;
 }

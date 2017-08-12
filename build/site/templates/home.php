@@ -10,34 +10,14 @@
       </header>
       <div class="carousel">
         <div class="slider">
-          <div>
-            <img src="assets/images/practice-areas_youth.png" alt="">
-            <h3>Jugendstrafrecht</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ante massa, at lacinia dolor ultrices in.
-            </p>
-          </div>
-          <div>
-            <img src="assets/images/practice-areas_petty.png" alt="">
-            <h3>Ordnungswidrigkeiten</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ante massa, at lacinia dolor ultrices in.
-            </p>
-          </div>
-          <div>
-            <img src="assets/images/practice-areas_drugs.png" alt="">
-            <h3>Betäubungsmittelstrafrecht</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ante massa, at lacinia dolor ultrices in.
-            </p>
-          </div>
-          <div>
-            <img src="assets/images/practice-areas_traffic.png" alt="">
-            <h3>Verkehrsstrafrecht</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ante massa, at lacinia dolor ultrices in.
-            </p>
-          </div>
+          <?php $sliderItems = page('unsere-leistungen')->carousel()->toStructure(); ?>
+          <?php foreach ($sliderItems as $item) : ?>
+            <div>
+              <img src="<?= $item->image()->toFile()->url() ?>" alt="">
+              <h3><?= $item->title() ?></h3>
+              <?= $item->description()->kt() ?>
+            </div>
+          <?php endforeach ?>
         </div>
         <div class="slider-controls">
           <button class="bullet-icon" type="button">
@@ -121,7 +101,7 @@
           <strong>Auf dem neuesten Stand</strong>
           <h2>Aktuelles</h2>
         </header>
-        <p>Hier finden Sie Informationen über aktuelle Entwicklungen in Rechtsprechung und Lehre. Außerdem stellen wir in unserem Archiv alle Materialien für die Studenten der DHBW Lörrach zur Verfügung.</p>
+        <?= page('forschung-und-lehre')->intro()->kt() ?>
         <a class="button" href="<?= page('forschung-und-lehre')->url() ?>" style="margin-top: 1em;">Zum Archiv →</a>
       </div>
       <div class="two-thirds">

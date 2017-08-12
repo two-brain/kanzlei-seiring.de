@@ -10,6 +10,9 @@ export default function tinySlider() {
       '900': 3
     },
     slideBy: 1,
+    autoplay: true,
+    autoplayTimeout: 2500,
+    autoplayHoverPause: true,
     gutter: 10,
     controlsContainer: '.slider-controls'
   });

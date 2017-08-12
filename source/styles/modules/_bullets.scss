@@ -88,6 +88,7 @@ $icon-bullet-size: 3.5em;
     font-family: $heading-font-family;
     font-weight: $heading-font-weight--light;
     margin: 0 0 ($icon-bullet-size / 20) 0;
+    font-variant: small-caps;
   }
 
   p:last-child {

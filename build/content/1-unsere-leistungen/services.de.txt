@@ -1,0 +1,68 @@
+Title: Leistungen
+
+----
+
+Text: Und das jeden Tag!
+
+----
+
+Intro: Wir machen echt viel.
+
+----
+
+Carousel: 
+
+- 
+  title: Strafrecht
+  image: services_balance.png
+  description: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Proin sodales nunc
+    purus, tempor venenatis lorem aliquet
+    sit amet. In tempor sapien tempus,
+    rhoncus orci sit amet, interdum est.
+- 
+  title: Jugendstrafrecht
+  image: services_verdict.png
+  description: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Proin sodales nunc
+    purus, tempor venenatis lorem aliquet
+    sit amet. In tempor sapien tempus,
+    rhoncus orci sit amet, interdum est.
+- 
+  title: 'Zivil- / Vertragsrecht'
+  image: services_contract.png
+  description: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Proin sodales nunc
+    purus, tempor venenatis lorem aliquet
+    sit amet. In tempor sapien tempus,
+    rhoncus orci sit amet, interdum est.
+- 
+  title: Ordnungswidrigkeiten
+  image: services_law-book.png
+  description: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Proin sodales nunc
+    purus, tempor venenatis lorem aliquet
+    sit amet. In tempor sapien tempus,
+    rhoncus orci sit amet, interdum est.
+- 
+  title: Verkehrsrecht
+  image: services_traffic.png
+  description: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Proin sodales nunc
+    purus, tempor venenatis lorem aliquet
+    sit amet. In tempor sapien tempus,
+    rhoncus orci sit amet, interdum est.
+- 
+  title: Ehescheidung
+  image: services_mediation.png
+  description: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Proin sodales nunc
+    purus, tempor venenatis lorem aliquet
+    sit amet. In tempor sapien tempus,
+    rhoncus orci sit amet, interdum est.

@@ -2,8 +2,8 @@ Title: Lehre
 
 ----
 
-Text: Bla und sowas
+Text: Weiterführende Informationen ...
 
 ----
 
-Intro: Einleitung eben
+Intro: Hier finden Sie Informationen über aktuelle Entwicklungen in **Rechtsprechung und Lehre**. Außerdem stellen wir in unserem Archiv alle **Materialien für Studenten** der DHBW Lörrach zur Verfügung.
