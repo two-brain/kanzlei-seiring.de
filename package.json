@@ -25,11 +25,15 @@
     "check": "gulp lint:styles && gulp lint:scripts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "headhesive": "^1.2.4",
+    "smooth-scroll": "cferdinandi/smooth-scroll"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "bower-webpack-plugin": "^0.1.9",
     "browser-sync": "^2.18.13",
-    "eslint-config-google": "^0.9.1",
+    "eslint-config-airbnb": "^15.1.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-cached": "^1.1.1",
     "gulp-changed": "^3.1.0",
@@ -51,7 +55,6 @@
     "stylelint": "^8.0.0",
     "stylelint-config-sass-guidelines": "^3.1.0",
     "vinyl-named": "^1.1.0",
-    "webpack": "^3.5.3",
     "webpack-stream": "^4.0.0"
   },
   "stylelint": {
@@ -61,19 +64,11 @@
   "eslintConfig": {
     "extends": [
       "eslint:recommended",
-      "google"
+      "airbnb"
     ],
     "env": {
       "browser": true
     },
     "rules": {}
-  },
-  "dependencies": {
-    "gulp-rsync": "^0.0.8",
-    "gumshoe": "cferdinandi/gumshoe",
-    "headhesive": "^1.2.4",
-    "smooth-scroll": "cferdinandi/smooth-scroll",
-    "van11y-accessible-accordion-aria": "^1.0.5",
-    "vinyl-ftp": "^0.6.0"
   }
 }
