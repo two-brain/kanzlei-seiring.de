@@ -1,5 +1,4 @@
 $overlay-opacity: 0.9;
-$overlay-opacity--dark: 0.65;
 
 .overlay {
   background-repeat: no-repeat;
@@ -19,13 +18,13 @@ $overlay-opacity--dark: 0.65;
   }
 
   &--dark {
-    strong {
-      color: $white;
-    }
+    // strong {
+    //   color: $white;
+    // }
 
     &::after {
-      background: $dark-gray;
-      opacity: $overlay-opacity--dark;
+      background: $action-color;
+      opacity: $overlay-opacity;
     }
   }
 

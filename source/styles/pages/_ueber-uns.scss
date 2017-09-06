@@ -1,0 +1,71 @@
+$team-card-padding: 1em;
+$team-background-color-primary: $light-gray;
+$team-background-color-secondary: darken($team-background-color-primary, 2%);
+$photo-size: 150px;
+
+.team {
+  background: $team-background-color-primary;
+
+  p {
+    text-align: left;
+  }
+}
+
+.seiring {
+  @include grid-container;
+  @include grid-column(12, $sixfourty);
+}
+
+.assistant {
+  @include grid-container;
+  @include grid-column(12);
+
+  @include grid-media($sixfourty) {
+    @include grid-column(6);
+  }
+}
+
+.card {
+  background: $white;
+  border: $base-border;
+  padding: $team-card-padding;
+  margin-top: $blog-item-margin-top;
+  text-align: center;
+  position: relative;
+  z-index: $base-z-index;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: calc(#{$photo-size} - #{$team-card-padding});
+    top: 0;
+    left: 0;
+    background: $team-background-color-secondary;
+    border-bottom: $base-border;
+    z-index: -1;
+  }
+}
+
+.photo {
+  background: $white;
+  padding: 5px;
+  width: $photo-size;
+  height: $photo-size;
+  border-radius: 50%;
+  border: $base-border;
+  display: inline-block;
+  box-sizing: content-box;
+  position: relative;
+
+  img {
+    width: $photo-size;
+    border-radius: 50%;
+  }
+}
+
+.position {
+  font-family: $base-font-family;
+  font-size: $paragraph-font-size;
+}

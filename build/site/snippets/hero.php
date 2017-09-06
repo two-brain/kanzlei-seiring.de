@@ -1,20 +1,13 @@
 <div class="hero">
-  <div class="grid-container">
-    <div class="hero-content">
-      <h1>Willkommen bei Seiring & Seiring.</h1>
-      <p class="lead">
-        Gemeinsam finden wir professionelle Antworten auf Ihre rechtlichen Fragen.<br>
-        Wir nehmen uns Zeit für Ihr Anliegen, sprechen Sie uns an!
-      </p>
-      <p class="contact-us">
-        <a class="button" href="mailto:<?= $site->mail()->html() ?>">
-          <?= (new Asset('assets/images/icons/mail.svg'))->content() ?>
-          <?= $site->mail()->html() ?>
-        </a>
-        <a class="button transparent" href="#services">
-          Hier erfahren Sie mehr ↓
-        </a>
-      </p>
+  <div class="hero-content">
+    <h1><?= $page->intro_heading() ?></h1>
+    <p class="lead">
+      <?= $page->intro() ?>
+    </p>
+    <div class="more-options">
+      <a class="button transparent" href="#<?= $page->uid() ?>">
+        Hier erfahren Sie mehr ↓
+      </a>
     </div>
   </div>
   <div class="hero-bottom"></div>

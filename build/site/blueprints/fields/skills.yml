@@ -1,0 +1,13 @@
+label: Kompetenzen
+type: structure
+modalsize: large
+entry: >
+  <strong>{{title}}</strong><br>
+  {{description}}
+fields:
+  title:
+    label: Name
+    type: text
+  description:
+    label: Beschreibung
+    type: textarea

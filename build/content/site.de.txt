@@ -7,3 +7,63 @@ Mail: info@kanzlei-seiring.de
 ----
 
 Footer: 
+
+----
+
+Phone: (0761) 72 523
+
+----
+
+Testimonials: 
+
+- 
+  name: P.F.
+  date: 07.05.2014
+  source: anwalt.de
+  text: >
+    "Die Kanzlei hat sich meiner Problematik
+    hochprofessionell angenommen und das
+    Optimum erzielt. Betreuung, Beratung und
+    gerichtliche Vertretung waren ohne
+    jegliche Beanstandung .. absolute
+    Empfehlung!"
+  url: >
+    https://www.anwalt.de/seiring/bewertungen.php
+- 
+  name: T.K.
+  date: 04.04.2016
+  source: anwalt.de
+  text: >
+    "Vorbildlicher Service für Mandanten,
+    fachlich sehr kompetent und äußerst
+    netter persönlicher Kontakt!"
+  url: >
+    https://www.anwalt.de/seiring/bewertungen.php
+
+----
+
+Lets-help: Wir sind an Ihrer Seite, wenn es darauf ankommt.
+
+----
+
+Address: 
+
+Seiring & Seiring Rechtsanwälte
+Dreikönigsstraße 12
+79102 Freiburg im Breisgau
+
+----
+
+Fon: 0761 - 725 23
+
+----
+
+Fax: 0761 - 736 31
+
+----
+
+Quote: non ex regula ius sumatur, sed ex iure, quod est regula fiat.
+
+----
+
+Vcard: Kanzlei-Seiring.vcf

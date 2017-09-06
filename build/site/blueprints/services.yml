@@ -13,10 +13,32 @@ fields:
   title:
     label: Title
     type:  text
+  intro_heading:
+    label: Einleitung (Überschrift)
+    type:  text
   intro:
-    label: Einleitung
+    label: Einleitung (Text)
     type:  textarea
+  text_heading:
+    label: Text (Überschrift)
+    type:  text
+    width: 1/2
+  text_subheading:
+    label: Text (Unterüberschrift)
+    type:  text
+    width: 1/2
   text:
     label: Text
     type:  textarea
   carousel: carousel
+  engagement:
+    label: Engagement
+    type: structure
+    modalsize: large
+    style: table
+    # entry: >
+    #   {{description}}<br>
+    fields:
+      text:
+        label: Eintrag
+        type: textarea

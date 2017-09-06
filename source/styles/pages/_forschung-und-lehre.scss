@@ -1,0 +1,39 @@
+.news {
+  background: $light-gray;
+
+  &-intro {
+    text-align: center;
+
+    @include grid-media($sixfourty) {
+      text-align: left;
+    }
+
+    @include grid-media($large) {
+      @include grid-column(4);
+    }
+
+    p {
+      width: 75%;
+      margin: 0 auto $small-spacing;
+
+      @include grid-media($large) {
+        width: 100%;
+      }
+    }
+
+    .button {
+      margin-top: $small-spacing;
+
+      @include grid-media($sixfourty) {
+        float: right;
+      }
+    }
+  }
+
+  &-list {
+    @include grid-media($large) {
+      @include grid-column(7);
+      @include grid-push(1);
+    }
+  }
+}

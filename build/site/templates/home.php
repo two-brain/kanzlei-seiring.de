@@ -1,25 +1,33 @@
 <?php snippet('header') ?>
 
-  <?php snippet('hero'); ?>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Willkommen bei Seiring & Seiring.</h1>
+      <p class="lead">
+        Gemeinsam finden wir professionelle Antworten auf Ihre rechtlichen Fragen.<br>
+        Wir nehmen uns Zeit für Ihr Anliegen, sprechen Sie uns an!
+      </p>
+      <p class="more-options">
+        <a class="button" href="mailto:<?= $site->mail() ?>">
+          <?= (new Asset('assets/images/icons/mail.svg'))->content() ?>
+          <?= $site->mail() ?>
+        </a>
+        <a class="button transparent" href="#<?= $page->uid() ?>">
+          Hier erfahren Sie mehr ↓
+        </a>
+      </p>
+    </div>
+    <div class="hero-bottom"></div>
+  </div>
 
-  <section id="services" class="section services">
+  <div id="<?= $page->uid() ?>" class="section">
     <div class="grid-container">
       <header class="section-header">
-        <strong>Ihr Partner in Rechtsfragen</strong>
-        <h2>Unsere Fachgebiete</h2>
+        <h4><?= page('unsere-leistungen')->text_subheading() ?></h4>
+        <h2><?= page('unsere-leistungen')->text_heading() ?></h2>
       </header>
       <div class="carousel">
-        <div class="slider">
-          <?php $sliderItems = page('unsere-leistungen')->carousel()->toStructure(); ?>
-          <?php foreach ($sliderItems as $item) : ?>
-            <div>
-              <img src="<?= $item->image()->toFile()->url() ?>" alt="">
-              <h3><?= $item->title() ?></h3>
-              <?= $item->description()->kt() ?>
-            </div>
-          <?php endforeach ?>
-        </div>
-        <div class="slider-controls">
+        <div id="slider-controls" class="slider-controls">
           <button class="bullet-icon" type="button">
             <?= (new Asset("assets/images/icons/chevron-left.svg"))->content() ?>
             <span class="sr-only">Zurück</span>
@@ -29,119 +37,95 @@
             <span class="sr-only">Weiter</span>
           </button>
         </div>
+        <div id="slider" class="slider">
+          <?php
+            $sliderItems = page('unsere-leistungen')->carousel()->toStructure();
+            foreach ($sliderItems as $item) :
+          ?>
+          <div class="slide">
+            <img src="<?= $item->image()->toFile()->url() ?>" alt="">
+            <h3 class="slide-title"><?= $item->title() ?></h3>
+            <?= $item->short()->kt() ?>
+          </div>
+          <?php endforeach ?>
+        </div>
       </div>
-      <div class="lets-help">
-        <strong>Sie sind sich bei der Einordnung unsicher?</strong><br>
+      <div class="center">
+        <p class="lead">
+          <strong>Sie sind sich bei der Einordnung unsicher?</strong>
+        </p>
         <a class="button" href="<?= page('unsere-leistungen')->url() ?>">Wir sind behilflich →</a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section id="about-us" class="section about-us overlay overlay--dark">
+  <div id="<?= page('ueber-uns')->uid() ?>" class="testimonials overlay overlay--dark">
     <div class="grid-container">
-      <header class="section-header">
-        <strong>Wir stellen uns vor</strong>
-        <h2>Unsere Kanzlei</h2>
-      </header>
-      <ul class="bullets">
-        <li class="bullet">
-          <div class="bullet-icon">
-            <?= (new Asset("assets/images/icons/lightbulb.svg"))->content() ?>
-          </div>
-          <div class="bullet-content">
-            <h3>Unser Selbstverständnis</h3>
-            <p>Wir bieten eine fundierte und diskrete Bearbeitung Ihrer Rechtsprobleme. Dabei kann auf jahrelange Praxis, die durch ständige Fortbildungen erweitert wird, zurückgegriffen werden. Auf dieses Wissen können Sie vertrauen.</p>
-          </div>
-        </li>
-        <li class="bullet">
-          <div class="bullet-icon">
-            <?= (new Asset("assets/images/icons/gavel.svg"))->content() ?>
-          </div>
-          <div class="bullet-content">
-            <h3>In jeder Lebenslage</h3>
-            <p>Wahl-, Pflichtverteidigung, jede Prozesssituation, AG/LG/OLG! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum.</p>
-          </div>
-        </li>
-        <li class="bullet">
-          <div class="bullet-icon">
-            <?= (new Asset("assets/images/icons/languages.svg"))->content() ?>
-          </div>
-          <div class="bullet-content">
-            <h3>International unterwegs</h3>
-            <p>Wir bieten ihnen rechtliche Hilfe neben Deutsch auch in:</p>
-            <ul>
-              <li>Französisch</li>
-              <li>Englisch</li>
-              <li>Spanisch</li>
-            </ul>
-          </div>
-        </li>
-        <li class="bullet">
-          <div class="bullet-icon">
-            <?= (new Asset("assets/images/icons/star.svg"))->content() ?>
-          </div>
-          <div class="bullet-content">
-            <h3>Zu Ihrer Zufriedenheit</h3>
-            <p>Die Kanzlei befindet sich in Innenstadtnähe von Freiburg im schönen Altbauviertel Wiehre.</p>
-            <p>Kostenlose Mandantenparkplätze stehen vor dem Haus zur Verfügung, sowie in 200 m die Haltestelle „Brauerei Ganter“ der Straßenbahnlinie 1.</p>
-          </div>
-          <a class="button transparent" href="<?= page('ueber-uns')->url() ?>" style="float: right; margin-right: 2em;">Lernen Sie uns kennen →</a>
-        </li>
-      </ul>
+      <?php
+      $testimonials = $site->testimonials()->toStructure();
+      foreach ($testimonials as $testimonial) :
+        ?>
+        <blockquote>
+          <?= $testimonial->text()->kt() ?>
+          <cite class="sr-only">Bewertung vom <?= $testimonial->date() ?> von <?= $testimonial->name() ?> auf <a href="<?= $testimonial->url() ?>"><?= $testimonial->source() ?></a></cite>
+        </blockquote>
+      <?php endforeach ?>
+      <a class="button transparent" href="<?= page('ueber-uns')->url() ?>">Lernen Sie uns kennen →</a>
     </div>
-  </section>
+  </div>
 
-  <section id="news" class="section news">
+  <div id="<?= page('forschung-und-lehre')->uid() ?>" class="news section">
     <div class="grid-container">
-      <div class="one-third">
+      <div class="news-intro">
         <header class="section-header">
-          <strong>Auf dem neuesten Stand</strong>
-          <h2>Aktuelles</h2>
+          <h4><?= page('forschung-und-lehre')->text_subheading() ?></h4>
+          <h2><?= page('forschung-und-lehre')->text_heading() ?></h2>
         </header>
-        <?= page('forschung-und-lehre')->intro()->kt() ?>
-        <a class="button" href="<?= page('forschung-und-lehre')->url() ?>" style="margin-top: 1em;">Zum Archiv →</a>
+        <div class="clearfix">
+          <?= page('forschung-und-lehre')->text()->kt() ?>
+          <a class="button" href="<?= page('forschung-und-lehre')->url() ?>">Zum Archiv →</a>
+        </div>
       </div>
-      <div class="two-thirds">
-        <div class="bullets">
+      <div class="news-list">
+        <div class="blog-list">
           <?php foreach(page('forschung-und-lehre')->children()->visible()->flip()->limit(2) as $article) : ?>
-          <a class="bullet-date" href="<?= $article->url() ?>">
-            <article class="bullet">
-              <div class="date-icon">
+            <a class="blog-item blog-item--is-bordered" href="<?= $article->url() ?>">
+              <div class="blog-date">
                 <time datetime="<?= $article->date('%Y-%m-%d') ?>">
                   <?= $article->date('%d'); ?><br>
                   <span><?= $article->date('%b'); ?></span>
                 </time>
               </div>
-              <div class="date-content">
-                <h3><?= $article->title()->html() ?></h3>
+              <div class="blog-body">
+                <h3 class="blog-title"><?= $article->title()->html() ?></h3>
                 <?= $article->intro()->kirbytext() ?>
               </div>
-            </article>
-          </a>
+            </a>
           <?php endforeach ?>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section id="contact" class="section contact">
+  <div id="<?= page('kontakt')->uid() ?>" class="contact section">
     <div class="grid-container">
-      <div class="one-half">
+      <div class="contact-block">
         <header class="section-header">
-          <strong>Unverbindliche Anfrage</strong>
-          <h2>Kontakt</h2>
+          <h4><?= page('kontakt')->form_subheading() ?></h4>
+          <h2><?= page('kontakt')->form_heading() ?></h2>
         </header>
-        <div class="contact-form">
-          <form>
-            <input placeholder="Ihr Vor- und Nachname" type="text">
-            <input placeholder="Ihre Telefonnummer" type="text">
-            <input placeholder="Ihre Mail-Adresse" type="text">
-            <textarea placeholder="Beschreibung Ihres Anliegens"></textarea>
-            <button type="submit">Absenden</button>
-          </form>
-        </div>
+        <form class="form">
+          <?php snippet('form-fields'); ?>
+          <div class="more-options">
+            <button class="button" type="submit">
+              <?= (new Asset('assets/images/icons/send.svg'))->content() ?>
+              Absenden
+            </button>
+            <a class="button transparent" href="<?= page('kontakt')->url() ?>"><?= page('kontakt')->text_heading() ?> →</a>
+          </div>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
 
 <?php snippet('footer') ?>

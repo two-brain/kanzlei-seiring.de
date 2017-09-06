@@ -1,0 +1,92 @@
+$blog-item-line-height: 1rem;
+$blog-item-font-size: 2rem;
+$blog-item-date-size: 2em;
+$blog-item-arrow-size: $base-spacing;
+$blog-item-margin-top: 1.5 * $blog-item-arrow-size;
+$blog-item-padding: $blog-item-date-size / 2;
+
+.blog-list {
+  margin: 2 * $blog-item-margin-top 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.blog-item {
+  padding: $blog-item-padding;
+  margin-top: $blog-item-margin-top;
+  display: flex;
+  text-align: left;
+
+  &--is-bordered {
+    background: $white;
+    border: $base-border;
+    transition: $base-duration $base-timing;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 $blog-item-arrow-size $blog-item-arrow-size 0;
+      border-color: transparent darken($base-border-color, 10%) transparent transparent;
+      position: absolute;
+      left: -1px; // border-width
+      bottom: -($blog-item-arrow-size);
+      transition: $base-duration $base-timing;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $action-color;
+
+      &::before {
+        border-color: transparent $secondary-color transparent transparent;
+      }
+    }
+  }
+
+  p {
+    color: $base-font-color;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.blog-date {
+  text-align: center;
+  float: left;
+  height: $blog-item-date-size;
+  margin-top: $blog-item-date-size / 8;
+  width: $blog-item-date-size;
+  font-size: $blog-item-font-size;
+  line-height: $blog-item-line-height;
+  color: $action-color;
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight--light;
+
+  span {
+    font-size: $blog-item-line-height;
+    font-weight: $heading-font-weight;
+    color: $secondary-color;
+    text-transform: uppercase;
+  }
+}
+
+.blog-body {
+  padding-left: $blog-item-padding;
+}
+
+.blog-title {
+  color: $base-font-color;
+  font-size: 22px;
+  font-weight: $heading-font-weight--light;
+  margin: 0 0 ($blog-item-date-size / 8) 0;
+  font-variant: small-caps;
+}
+
+.forschung-und-lehre .blog-item {
+  background: $light-gray;
+}

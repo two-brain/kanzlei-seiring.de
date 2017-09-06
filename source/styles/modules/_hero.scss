@@ -8,12 +8,55 @@
   min-height: 40em;
   position: relative;
 
-  .hero-content {
-    bottom: 0;
+  align-items: center;
+  // background: image-url("background-image.png");
+  // background-position: right;
+  // background-size: none;
+  display: flex;
+  justify-content: center;
+  // min-height: 25em;
+  padding: 0 $gutter;
+
+  @include grid-media($large) {
+    // background-position: right;
+    background-size: cover;
+    justify-content: flex-start;
+  }
+
+  [data-namespace="unsere-leistungen"] & {
+    background-image: url('/assets/images/bg1.jpg');
+  }
+
+  [data-namespace="ueber-uns"] & {
+    background-image: url('/assets/images/bg4.jpg'); // https://unsplash.com/@shotbyjames
+  }
+
+  [data-namespace="forschung-und-lehre"] & {
+    background-image: url('/assets/images/bg2.jpg');
+  }
+
+  [data-namespace="kontakt"] & {
+    background-image: url('/assets/images/bg5.jpg'); // https://unsplash.com/@mvdheuvel
+  }
+
+  &-content {
+    // bottom: 0;
     color: $white;
-    padding-bottom: $hero-content-padding-bottom;
-    padding-left: $hero-content-padding-left;
-    position: absolute;
+    // padding-bottom: $hero-content-padding-bottom;
+    // padding-left: $hero-content-padding-left;
+    // position: absolute;
+    // max-width: 20em;
+    text-align: center;
+
+    @include grid-media($large) {
+      @include grid-push(1);
+      text-align: left;
+      max-width: 50em; // 800px
+    }
+
+    .home & .button {
+      min-width: 280px;
+    }
   }
 
   &-bottom {
@@ -26,11 +69,21 @@
   }
 }
 
-.contact-us {
-  margin-top: $base-spacing;
+.more-options {
+  @include grid-container;
+  margin-left: 0;
+  margin-top: $small-spacing;
 
   .button {
+    margin-top: $small-spacing;
     margin-right: $small-spacing;
-    min-width: 260px;
+
+    + .button {
+      margin-top: $small-spacing;
+    }
+  }
+
+  button + .transparent {
+    padding: 0.639em 1.556em;
   }
 }

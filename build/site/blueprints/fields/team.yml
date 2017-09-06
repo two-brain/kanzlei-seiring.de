@@ -1,0 +1,25 @@
+label: Team
+type: structure
+modalsize: large
+entry: >
+  <img src="/content/2-ueber-uns/{{image}}"><br>
+  <strong>{{title}}</strong><br>
+  <em>{{position}}</em><br>
+  {{description}}<br>
+fields:
+  title:
+    label: Name
+    type: text
+    width: 1/2
+  image:
+    label: Bild
+    type: select
+    options: images
+    width: 1/2
+    required: true
+  position:
+    label: Position
+    type: text
+  description:
+    label: Beschreibung
+    type: textarea

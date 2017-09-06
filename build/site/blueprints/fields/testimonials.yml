@@ -1,0 +1,26 @@
+label: Bewertungen
+type: structure
+modalsize: large
+entry: >
+  Bewertung auf <a href="{{url}}">{{source}}</a> von {{name}} am {{date}}:<br>
+  {{text}}
+fields:
+  name:
+    label: Name
+    type: text
+    width: 1/2
+  date:
+    label: Datum
+    type: text
+    width: 1/2
+  source:
+    label: Quelle (Name)
+    type: text
+    width: 1/2
+  url:
+    label: Quelle (URL)
+    type: url
+    width: 1/2
+  text:
+    label: Text
+    type: textarea

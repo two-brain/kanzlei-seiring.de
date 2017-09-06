@@ -1,19 +1,23 @@
-$slider-controls-top: 20%;
-$slider-controls-side: -20px;
-$slider-controls-opacity: 0.3;
-$slider-controls-opacity--hover: 1;
+$slider-controls-top: 10%;
+$slider-controls-side: -0.5em;
+$slider-z-index: $base-z-index + 5;
 
 .carousel {
   position: relative;
+  text-align: center;
+  margin-bottom: 3 * $base-spacing;
+}
 
-  .bullet-icon {
-    background: $medium-gray;
-    opacity: $slider-controls-opacity;
+.slide-image {
+  display: inline-block;
+}
 
-    &:hover {
-      opacity: $slider-controls-opacity--hover;
-    }
-  }
+.slide-title {
+  color: $action-color;
+  font-size: 22px;
+  font-weight: $heading-font-weight--light;
+  margin: $small-spacing 0 $small-spacing / 3;
+  font-variant: small-caps;
 }
 
 .slider-controls {
@@ -21,9 +25,15 @@ $slider-controls-opacity--hover: 1;
   position: absolute;
   top: $slider-controls-top;
   outline: 0;
+  z-index: $slider-z-index;
 
   button {
     position: relative;
+    background: $medium-gray;
+
+    &:hover {
+      background: $action-color;
+    }
   }
 
   [data-controls="prev"] {

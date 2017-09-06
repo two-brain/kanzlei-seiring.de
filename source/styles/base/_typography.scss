@@ -1,4 +1,6 @@
 $heading-margin-bottom: 1em;
+$lead-margin-bottom: 1em;
+$lead-font-size: 140%;
 
 body {
   color: $base-font-color;
@@ -18,6 +20,7 @@ h6 {
   font-weight: $heading-font-weight;
   line-height: $heading-line-height;
   margin: 0 0 $heading-margin-bottom;
+  transition: color $base-duration $base-timing;
 }
 
 h1 {
@@ -25,8 +28,13 @@ h1 {
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: $paragraph-font-size;
   margin: 0 0 $small-spacing;
+
+  &.lead {
+    font-size: $lead-font-size;
+    margin-bottom: $lead-margin-bottom;
+  }
 }
 
 a {
@@ -42,27 +50,8 @@ a {
   }
 }
 
-// hr {
-//   border-bottom: $base-border;
-//   border-left: 0;
-//   border-right: 0;
-//   border-top: 0;
-//   margin: $base-spacing auto;
-// }
-
-// address {
-//   font-size: 1.125rem;
-//   font-style: normal;
-//   margin: 0 0 $small-spacing;
-// }
-
-.lead {
-  font-size: 125%;
-  margin-bottom: 0.25em;
-}
-
-.center {
-  text-align: center;
+address {
+  font-style: normal;
 }
 
 .sr-only {
@@ -71,4 +60,12 @@ a {
   height: 1px;
   overflow: hidden;
   clip: rect(0px, 0px, 0px, 0px);
+}
+
+.center {
+  text-align: center;
+}
+
+.thick {
+  font-weight: 700;
 }

@@ -8,21 +8,83 @@ $back-top-bullet-size: 3.5em;
 .site-footer {
   background: $footer-background;
   position: relative;
+  text-align: center;
 
-  &,
-  & a {
-    color: $medium-gray;
+  a {
+    color: $footer-color;
+
+    &:focus,
+    &:hover {
+      color: $footer-color--hover;
+    }
   }
 
-  figure {
-    float: left;
-    margin-right: $base-spacing;
+  p {
+    color: $footer-color;
+    margin: 0;
   }
 
   hr {
-    border-color: lighten($footer-background, 15%);
-    margin: 0 auto;
-    max-width: $xlarge-screen;
+    border: 1px solid transparentize($footer-color, 0.3);
+    margin: $footer-hr-spacing auto;
+    width: $footer-hr-width;
+  }
+
+  &--primary {
+    @include grid-container;
+    padding: $base-spacing * 3 0.5em;
+  }
+
+  &--secondary {
+    @include grid-container;
+    padding: $small-spacing $base-spacing;
+  }
+}
+
+.footer-links {
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
+  padding: 0;
+
+  @include grid-media($neat-grid) {
+    float: left;
+    line-height: 1.8em;
+    margin-bottom: 0;
+    margin-left: 1em;
+  }
+
+  li {
+    list-style: none;
+    padding-right: 1em;
+
+    @include grid-media($neat-grid) {
+      display: inline;
+      text-align: left;
+    }
+  }
+
+  &--secondary {
+    @include grid-media($neat-grid) {
+      float: right;
+    }
+
+    li {
+      font-size: 0.9em;
+
+      @include grid-media($neat-grid) {
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+.balance {
+  margin-bottom: 1em;
+  margin-right: 1em;
+
+  @include grid-media($neat-grid) {
+    float: left;
+    margin-bottom: 0;
   }
 }
 
@@ -37,92 +99,4 @@ $back-top-bullet-size: 3.5em;
   height: $back-top-bullet-size;
   padding: $back-top-bullet-size / 6 $back-top-bullet-size / 4 $back-top-bullet-size / 4;
   width: $back-top-bullet-size;
-}
-
-
-.footer {
-  &--primary {
-    background: $footer-background;
-    padding: $base-spacing * 3;
-    width: 100%;
-    text-align: center;
-
-    hr {
-      border: 1px solid transparentize($footer-color, 0.3);
-      margin: $footer-hr-spacing auto;
-      width: $footer-hr-width;
-    }
-
-    p {
-      color: $footer-color;
-      margin: 0;
-      // font-size: 0.9em;
-    }
-  }
-
-  &-logo {
-    margin-bottom: 1em;
-    margin-right: 1em;
-    text-align: center;
-
-    @include grid-media($neat-grid) {
-      float: left;
-      margin-bottom: 0;
-    }
-  }
-
-  &--secondary {
-    background: $footer-background;
-    display: inline-block;
-    padding: $small-spacing $base-spacing;
-    width: 100%;
-  }
-
-  &-links {
-    line-height: 1.5em;
-    margin: 0 0 1em 0;
-    padding: 0;
-    text-align: center;
-
-    @include grid-media($neat-grid) {
-      float: left;
-      line-height: 1.8em;
-      margin-bottom: 0;
-      margin-left: 1em;
-    }
-
-    li {
-      list-style: none;
-      padding-right: 1em;
-
-      @include grid-media($neat-grid) {
-        display: inline;
-        text-align: left;
-      }
-    }
-
-    a {
-      color: $footer-color;
-      text-decoration: none;
-
-      &:focus,
-      &:hover {
-        color: $footer-color--hover;
-      }
-    }
-
-    &--secondary {
-      @include grid-media($neat-grid) {
-        float: right;
-      }
-
-      li {
-        font-size: 0.9em;
-
-        @include grid-media($neat-grid) {
-          font-size: 1em;
-        }
-      }
-    }
-  }
 }

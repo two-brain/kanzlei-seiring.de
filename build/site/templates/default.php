@@ -6,7 +6,7 @@
     </div>
   </div>
   <div class="page-content">
-    <div class="grid-container">
+    <div class="grid-container grid-container--small">
       <?= $page->intro()->kt() ?>
       <?= $page->text()->kt() ?>
     </div>

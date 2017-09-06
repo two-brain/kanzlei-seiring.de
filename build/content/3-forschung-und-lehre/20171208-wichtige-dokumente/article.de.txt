@@ -6,7 +6,7 @@ Intro: Dies ist eine Einleitung. Hier stehen Dinge wie: "Hallo! Die neueste Ausg
 
 ----
 
-Text: Lange versprochen, nun ist es endlich soweit: Die aktuelle Ausgabe der *Onlinezeitschrift für Höchstrichterliche Rechtsprechung zum Strafrecht* steht bereit (file: hrrs-7-17.pdf text: zum Download).
+Text: Lange versprochen, nun ist es endlich soweit: Die aktuelle Ausgabe der (file: hrrs-7-17.pdf text: Onlinezeitschrift für Höchstrichterliche Rechtsprechung zum Strafrecht) steht bereit zum Download.
 
 ----
 

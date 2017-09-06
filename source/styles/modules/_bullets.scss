@@ -1,92 +1,56 @@
+$bullets-margin-top: 2 * $base-spacing;
+$bullet-flex-basis: 30em;
 $icon-bullet-size: 3.5em;
 
 .bullets {
   display: flex;
   flex-wrap: wrap;
-  margin: 1em;
-  margin-bottom: 1em * $base-line-height;
-  overflow: auto;
-  padding: 0;
-}
+  margin-top: $bullets-margin-top;
+  text-align: center;
 
-.bullet-date {
-  padding: $small-spacing;
-  background: $white;
-  border-width: 1px 1px 1px 10px;
-  border-style: solid;
-  border-color: $medium-gray;
-  margin-top: $base-spacing;
-  transition: $base-duration $base-timing;
-
-  &:hover {
-    background: $medium-gray;
-
-    h3 {
-      color: $action-color;
-    }
-  }
-
-  p {
-    color: $base-font-color;
+  @include grid-media($sixfourty) {
+    text-align: left;
   }
 }
 
 .bullet {
-  flex-basis: 30em;
+  flex-basis: $bullet-flex-basis;
   flex-grow: 1;
 
   &-icon {
+    display: inline-block;
     background: $secondary-color;
     border-radius: 50%;
-    float: left;
     height: $icon-bullet-size;
     padding: $icon-bullet-size / 4;
+    margin-top: $icon-bullet-size / 4;
     width: $icon-bullet-size;
-  }
 
-  $date-line-height: 1rem;
-  $date-font-size: 2rem;
-  $date-bullet-size: 2em;
-
-  .date-icon {
-    text-align: center;
-    float: left;
-    height: $date-bullet-size;
-    padding: $date-bullet-size / 8;
-    width: $date-bullet-size;
-    font-size: $date-font-size;
-    line-height: $date-line-height;
-    color: $action-color;
-    font-family: $heading-font-family;
-
-    span {
-      font-size: $date-line-height;
-      font-weight: $heading-font-weight;
-      color: $secondary-color;
-      text-transform: uppercase;
+    @include grid-media($sixfourty) {
+      float: left;
+      display: block;
     }
 
-    h3 {
-      color: $medium-gray;
+    // article view
+    &.download {
+      float: none !important;
+      margin: $base-spacing auto $small-spacing;
     }
   }
 
-  &-content {
+  &-body {
     margin-bottom: 2em;
-    margin-left: $icon-bullet-size;
-    padding: 0 $base-spacing;
+
+    @include grid-media($sixfourty) {
+      margin-left: $icon-bullet-size;
+      padding: 0 $base-spacing;
+    }
   }
 
-  .date-content {
-    margin-left: 2 * $date-bullet-size;
-    padding: 0 $base-spacing;
-  }
-
-  h3 {
-    font-size: $icon-bullet-size / 2.5;
-    font-family: $heading-font-family;
+  &-title {
+    font-size: 22px;
     font-weight: $heading-font-weight--light;
-    margin: 0 0 ($icon-bullet-size / 20) 0;
+    margin: $small-spacing 0 $small-spacing / 3;
     font-variant: small-caps;
   }
 

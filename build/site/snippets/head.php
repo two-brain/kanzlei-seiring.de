@@ -1,12 +1,32 @@
 <head>
 
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
+  <title><?= $page->title()->html() ?> | <?= $site->title()->html() ?></title>
 
-  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:300,500,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600' rel='stylesheet' type='text/css'>
+
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+    crossorigin=""
+  />
+
+  <script
+    src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+    crossorigin="">
+  </script>
+
+   <script
+     type="text/javascript"
+     src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js">
+   </script>
+
+
 
   <?= css('assets/styles/main.css'); ?>
 

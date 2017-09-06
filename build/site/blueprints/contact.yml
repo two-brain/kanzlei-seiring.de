@@ -1,0 +1,43 @@
+title: Kontakt
+
+pages: false
+files: false
+options:
+  preview: true
+  status: false
+  template: false
+  url: false
+  delete: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+  intro_heading:
+    label: Einleitung (Überschrift)
+    type:  text
+  intro:
+    label: Einleitung (Text)
+    type:  textarea
+  text_heading:
+    label: Text (Überschrift)
+    type:  text
+    width: 1/2
+  text_subheading:
+    label: Text (Unterüberschrift)
+    type:  text
+    width: 1/2
+  text:
+    label: Text
+    type:  textarea
+  send_mail:
+    label: Hinweis auf Mail
+    type:  text
+  form_heading:
+    label: Kontaktformular (Überschrift)
+    type:  text
+    width: 1/2
+  form_subheading:
+    label: Kontaktformular (Unterüberschrift)
+    type:  text
+    width: 1/2

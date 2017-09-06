@@ -1,4 +1,4 @@
-title: Page
+title: Default
 
 pages: true # Aktuelles only
   template: article
@@ -7,7 +7,7 @@ pages: true # Aktuelles only
 files: false
 options:
   preview: true
-  status: false
+  status: true
   template: false
   url: false
   delete: false

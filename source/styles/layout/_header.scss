@@ -1,65 +1,87 @@
-$nav-background: $white;
-$nav-primary-height: 125px;
-$nav-secondary-height: 40px;
-$nav-padding: 1em;
+$header-z-index: $base-z-index + 10;
+// $header-border-top-width: 3px;
+$header-logo-height: 50px;
+$header-line-height: $header-logo-height;
+$header-padding: 1.5em;
+// $header-padding--max: 1.6 * $header-padding;
+$main-padding-top: calc(#{$header-line-height} + #{2 * $header-padding} + #{$base-border-width});
+// $header-secondary-height: 40px;
 
 .site-header {
-  border-top: 3px solid $action-color;
-  color: $dark-gray;
+  background: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  line-height: $header-line-height;
+  // min-height: $header-line-height;
+  width: 100%;
+  // border-top: $header-border-top-width solid $action-color;
+  border-bottom: $base-border;
+  z-index: $header-z-index;
+  transition: padding $base-duration $base-timing;
+  padding: $header-padding 0;
 
-  a {
-    color: $dark-gray;
-
-    &:hover,
-    &:focus {
-      color: $action-color;
-    }
-  }
-}
-
-.nav {
-  background-color: $nav-background;
-  border-bottom: 1px solid $medium-gray;
-  // width: 100%;
-
-  &--secondary {
-    font-size: 12px;
-    line-height: $nav-secondary-height;
-    min-height: $nav-secondary-height;
-  }
-
-  &--primary {
-    line-height: $nav-primary-height;
-    min-height: $nav-primary-height;
-    width: 100%;
-  }
+  // &--is-maximized {
+  //   padding: $header-padding--max 0;
+  // }
 }
 
 .logo {
-  float: left;
-  padding-left: $nav-padding;
-
-  svg {
-    // max-height: $nav-primary-height;
-    // padding: $small-spacing 0;
-  }
-}
-
-.emergency-phone {
-  color: $action-color;
-  font-weight: $base-font-weight-bold;
-  text-align: center;
+  // float: left;
+  // padding-left: $header-padding;
+  // display: none;
+  //
+  // @include grid-media($medium) {
+  //   display: inline-block;
+  // }
 }
 
 .page-links {
   float: right;
-  padding-right: $nav-padding;
+  // padding-right: $header-padding;
+
+  li {
+    display: inline-block;
+
+    + li {
+      margin-left: $header-padding / 2;
+    }
+  }
 
   a {
+    display: inline-block;
     font-weight: 400;
+    color: $dark-gray;
+
+    &:hover,
+    &:focus,
+    &.is-active {
+      color: $action-color;
+    }
   }
 
-  .is-active {
-    color: $action-color;
-  }
+  //
+  // .is-first {
+  //   @include grid-media($medium) {
+  //     display: none;
+  //   }
+  // }
+}
+
+// .emergency-phone {
+//   color: $action-color;
+//   font-weight: $base-font-weight--bold;
+//   text-align: center;
+// }
+
+// .timeline {
+//   display: none;
+//
+//   @include grid-media($large) {
+//     display: inline;
+//   }
+// }
+
+main {
+  padding-top: $main-padding-top;
 }

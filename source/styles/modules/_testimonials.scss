@@ -1,0 +1,29 @@
+$testimonial-padding: 5 * $base-spacing 0;
+$testimonial-button-margin-top: $base-spacing;
+
+.testimonials {
+  background-image: url('/assets/images/bg_about-us.jpg');
+  // background-position: top;
+  background-attachment: fixed;
+  color: $white;
+  padding: $testimonial-padding;
+  text-align: center;
+
+  p {
+    width: 75%;
+    margin: 0 auto;
+    font-size: $lead-font-size;
+  }
+
+  blockquote + blockquote p {
+    margin-top: 2 * $base-spacing;
+  }
+
+  .button {
+    margin-top: 2 * $base-spacing;
+
+    @include grid-media($large) {
+      float: right;
+    }
+  }
+}

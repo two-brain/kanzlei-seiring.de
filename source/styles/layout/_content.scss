@@ -1,47 +1,32 @@
-.grid-container {
+$section-padding: 6 * $base-spacing 0;
+$page-padding: 3 * $base-spacing 0 4 * $base-spacing;
+$page-title-background: $medium-gray;
+
+.section {
+  padding: $section-padding;
+}
+
+.section-header {
   @include grid-container;
-  margin: 0 auto;
-  max-width: $grid-width;
-}
+  text-align: center;
+  text-transform: uppercase;
 
-// .one-half {
-//   padding: 2em $base-spacing;
-//
-//   @include grid-media($large) {
-//     @include grid-column(6);
-//   }
-// }
+  h4 {
+    color: $medium-gray;
+    font-size: 16px;
+    margin: 0;
+  }
 
-.one-third {
-  @include grid-media($large) {
-    @include grid-column(4);
+  h2 {
+    color: $action-color;
+    font-size: 40px;
   }
 }
-
-.two-thirds {
-  @include grid-media($large) {
-    @include grid-column(7);
-    @include grid-push(1);
-  }
-}
-
-// .one-fourth {
-//   @include grid-media($large) {
-//     @include grid-column(6);
-//   }
-//
-//   @include grid-media($neat-grid) {
-//     @include grid-column(3);
-//   }
-// }
-
-// main {
-//   background: $light-gray;
-// }
 
 .page-title {
-  background: $medium-gray;
+  background: $page-title-background;
   padding: 1.5 * $base-spacing 0;
+  text-align: center;
 
   h1 {
     color: $white;
@@ -51,10 +36,5 @@
 }
 
 .page-content {
-  padding: 2 * $base-spacing 0;
-}
-
-.section {
-  @include grid-container;
-  clear: both;
+  padding: $page-padding;
 }

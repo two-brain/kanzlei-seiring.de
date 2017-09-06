@@ -1,0 +1,35 @@
+.flex-boxes {
+  $flex-box-padding: 2em 2em 3em 2em;
+  $flex-box-background: $light-gray;
+  $flex-box-color: $light-gray;
+  $flex-box-top-color: $medium-gray;
+  $flex-box-border-color: $light-gray;
+  $flex-box-border: 5px solid $flex-box-top-color;
+  $flex-box-border-radius: $border-radius-round $border-radius-round 0 0;
+  $flex-box-width: 20em;
+  $flex-box-width--big: 45em;
+  $flex-box-gutter: 0.5em;
+
+  @include clearfix;
+  align-items: stretch;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+  .flex-box {
+    align-self: stretch;
+    background: $flex-box-background;
+    border-radius: $flex-box-border-radius;
+    display: block;
+    flex: 2 2 $flex-box-width;
+    margin: $flex-box-gutter;
+    padding: $flex-box-padding;
+    border-top: $flex-box-border;
+
+    &--is-wide {
+      flex: 1 1 $flex-box-width--big;
+    }
+  }
+}

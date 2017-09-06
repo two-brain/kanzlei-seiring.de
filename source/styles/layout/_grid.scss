@@ -1,0 +1,20 @@
+.clearfix {
+  @include grid-container;
+}
+
+.grid-container {
+  @include grid-container;
+  margin: 0 auto;
+  max-width: $xlarge-screen;
+  padding: 0 1em;
+
+  &--small {
+    max-width: $grid-width--page;
+  }
+}
+
+.one-half {
+  @include grid-media($medium) {
+    @include grid-column(6);
+  }
+}

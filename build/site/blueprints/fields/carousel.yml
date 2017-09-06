@@ -4,17 +4,25 @@ modalsize: large
 entry: >
   <img src="/content/1-unsere-leistungen/{{image}}"><br>
   <strong>{{title}}</strong><br>
-  {{description}}<br>
+  {{short}}<br>
 fields:
   title:
     label: Name
     type: text
-    width: 2/3
+  is_wide:
+    label: Breites Feld
+    type: checkbox
+    text: Viel Text?
+    width: 1/2
   image:
     label: Bild
     type: select
     options: images
-    width: 1/3
-  description:
-    label: Beschreibung
+    width: 1/2
+    required: true
+  short:
+    label: Beschreibung (kurz)
+    type: textarea
+  long:
+    label: Beschreibung (lang)
     type: textarea

@@ -1,0 +1,83 @@
+$overlay-opacity: 0.6;
+$map-height: 500px;
+
+.contact {
+  background-image: url('/assets/images/bg_contact.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &-block {
+    padding: 3 * $base-spacing 1.5 * $base-spacing;
+    // position: relative;
+    // background: rgba($white, $overlay-opacity);
+    background: rgba($light-gray, $overlay-opacity);
+
+    @include grid-media($large) {
+      @include grid-push(5);
+    }
+  }
+
+  &-intro {
+    @include grid-media($medium) {
+      @include grid-column(6);
+      @include grid-push(1);
+    }
+  }
+
+  &-info {
+    @include grid-media($medium) {
+      @include grid-column(4);
+      @include grid-push(1);
+    }
+  }
+}
+
+.form {
+  .button {
+    min-width: 230px;
+
+    + .button {
+      @include grid-media($sixfourty) {
+        float: right;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.contact-form {
+  background: $light-gray;
+
+  .form {
+    @include grid-media($medium) {
+      @include grid-column(8);
+      @include grid-push(2);
+    }
+  }
+
+  .button {
+    display: inline-block;
+  }
+}
+
+.input-half {
+  @include grid-media($sixfourty) {
+    width: calc(50% - #{$gutter / 4});
+    float: left;
+
+    + .input-half {
+        margin-left: $gutter / 2;
+    }
+  }
+}
+
+.send-mail {
+  text-align: center;
+  margin-top: 2 * $base-spacing;
+}
+
+#map_canvas {
+  height: $map-height;
+  width: 100%;
+  z-index: $base-z-index;
+}

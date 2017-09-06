@@ -5,39 +5,48 @@ ol {
   padding: 0;
 }
 
-dl {
-  margin: 0;
-}
+// dl {
+//   margin: 0;
+// }
+//
+// dt {
+//   font-weight: $base-font-weight--bold;
+//   margin: 0;
+// }
+//
+// dd {
+//   margin: 0;
+// }
 
-dt {
-  font-weight: $base-font-weight-bold;
-  margin: 0;
-}
 
-dd {
-  margin: 0;
-}
+// nav {
+//   $navigation-padding: 1.5em;
+//
+//   ul {
+//     clear: both;
+//     display: inline;
+//
+//     li {
+//       display: inline;
+//       float: left;
+//
+//       + li {
+//         margin-left: $navigation-padding;
+//       }
+//
+//       a {
+//         display: inline-block;
+//         text-align: center;
+//       }
+//     }
+//   }
+// }
 
+.has-bullets {
+  margin-left: $base-spacing;
+  margin-bottom: 0.5em;
 
-nav {
-  $navigation-padding: 1.5em;
-
-  ul {
-    clear: both;
-    display: inline;
-
-    li {
-      display: inline;
-      float: left;
-
-      + li {
-        margin-left: $navigation-padding;
-      }
-
-      a {
-        display: inline-block;
-        text-align: center;
-      }
-    }
+  li {
+    list-style-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 12" width="8" height="12"><path fill="#fff" d="M0 8h4v4H0zm4-4h4v4H4zM0 0h4v4H0z"/></svg>');
   }
 }
