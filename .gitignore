@@ -1,9 +1,11 @@
 *.log
 node_modules
+yarn.lock
 workbench
 build/assets
 build/kirby
 build/panel
+build/site/snippets/piwik.php
 build/site/config/config.kanzlei-seiring.de.php
 
 
