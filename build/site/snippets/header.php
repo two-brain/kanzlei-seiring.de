@@ -4,7 +4,7 @@
 
   <?php snippet('head') ?>
 
-  <body>
+  <body id="start">
     <header id="js-header" class="site-header">
       <div class="grid-container">
         <nav class="page-links">

@@ -20,7 +20,7 @@
           foreach($files as $file) :
         ?>
         <li>
-          <a href="<?= $file->url() ?>">
+          <a class="no-barba" href="<?= $file->url() ?>">
             <?= $file->filename() ?>
             (<?= $file->niceSize() ?>)
           </a>

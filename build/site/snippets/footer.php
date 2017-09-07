@@ -3,7 +3,7 @@
       </div>
     </main>
     <footer id="js-footer" class="site-footer">
-      <a class="back-top" href="#">
+      <a class="back-top" href="#start">
         <?= (new Asset("assets/images/footer_back-top.svg"))->content() ?>
       </a>
       <div class="site-footer--primary">
@@ -30,8 +30,7 @@
         </div>
       </div>
     </footer>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.3/turbolinks.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script> -->
+    
     <?= js('assets/scripts/main.js', true); ?>
 
   </body>

@@ -4,10 +4,8 @@
  * Loading dependencies
  */
 
-const zenscroll = require('zenscroll');
-// const waypoints = require('waypoints/lib/noframework.waypoints.js');
-
-import NProgress from 'nprogress';
+import zenscroll from 'zenscroll';
+import Barba from 'barba.js';
 import { tns } from 'tiny-slider/src/tiny-slider.module';
 
 
@@ -27,22 +25,7 @@ function featureDetection() {
 }
 
 
-// 2. Growing / shrinking header
-
-// function headerGrow() {
-//   const body = document.body;
-//   const header = document.getElementById('js-header');
-//   new Waypoint({
-//     element: body,
-//     offset: -200,
-//     handler: function() {
-//       header.classList.toggle('site-header--is-maximized');
-//     }
-//   });
-// }
-
-
-// 3. tinySlider
+// 2. tinySlider
 
 function tinySlider() {
   // const sliderElement = document.getElementById('slider');
@@ -125,37 +108,17 @@ function mapInit() {
  * Initializing functions
  */
 
-// var Turbolinks = require('turbolinks');
-// Turbolinks.start();
-//
-// document.addEventListener('turbolinks:click', function() {
-//   NProgress.start();
-// });
-//
-// document.addEventListener('turbolinks:render', function() {
-//   NProgress.done();
-//   NProgress.remove();
-// });
-//
-// document.addEventListener('turbolinks:load', function() {
-//   // tinySlider();
-//   headerGrow();
-// })
-
 
 window.onload = function() {
   featureDetection();
   tinySlider();
-  // headerGrow();
 };
 
 
 // Barba-specific
 
-import Barba from 'barba.js';
-
 // Define barba properties
-Barba.transitionLength = 750;
+Barba.transitionLength = 1000;
 
 // Define transition
 var Transition = Barba.BaseTransition.extend({
@@ -262,19 +225,17 @@ Barba.Pjax.Dom.containerClass = 'wrapper';
 const MapView = Barba.BaseView.extend({
   namespace: 'kontakt',
   onEnter: function() {
-      // The new Container is ready and attached to the DOM.
-
-      mapInit();
-
+    // The new Container is ready and attached to the DOM.
+    mapInit();
   },
   onEnterCompleted: function() {
-      // The Transition has just finished.
+    // The Transition has just finished.
   },
   onLeave: function() {
-      // A new Transition toward a new page has just started.
+    // A new Transition toward a new page has just started.
   },
   onLeaveCompleted: function() {
-      // The Container has just been removed from the DOM.
+    // The Container has just been removed from the DOM.
   }
 });
 
@@ -285,7 +246,6 @@ Barba.Pjax.start();
 Barba.Prefetch.init();
 
 Barba.Dispatcher.on('linkClicked', function(element) {
-  NProgress.start();
   const activeNavElements = document.getElementsByClassName('is-active');
   let i;
 
@@ -298,22 +258,25 @@ Barba.Dispatcher.on('linkClicked', function(element) {
   const elementLink = element.getAttribute('href');
   const header = document.getElementById('js-header');
   const navLinkToAddActive = header.querySelector(`a[href="${elementLink}"]`);
-  navLinkToAddActive.classList.add('is-active');
+
+  try {
+    navLinkToAddActive.classList.add('is-active');
+
+  } catch (e) {
+    console.log(e);
+  }
 });
 
-Barba.Dispatcher.on('initStateChange', function() {
-  NProgress.inc();
-});
+// Barba.Dispatcher.on('initStateChange', function() {
+//
+// });
 
 Barba.Dispatcher.on('newPageReady', function() {
-  NProgress.inc();
   tinySlider();
 });
 
 Barba.Dispatcher.on('transitionCompleted', function() {
-  // tinySlider();
   window.scrollTo(0, 0);
-  NProgress.done();
 });
 
 
