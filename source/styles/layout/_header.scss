@@ -1,10 +1,10 @@
 $header-z-index: $base-z-index + 10;
-// $header-border-top-width: 3px;
+$header-border-top-width: 3px;
 $header-logo-height: 50px;
 $header-line-height: $header-logo-height;
 $header-padding: 1.5em;
 // $header-padding--max: 1.6 * $header-padding;
-$main-padding-top: calc(#{$header-line-height} + #{2 * $header-padding} + #{$base-border-width});
+$main-padding-top: calc(#{$header-line-height} + #{2 * $header-padding} + #{$header-border-top-width} + #{$base-border-width});
 // $header-secondary-height: 40px;
 
 .site-header {
@@ -15,30 +15,15 @@ $main-padding-top: calc(#{$header-line-height} + #{2 * $header-padding} + #{$bas
   line-height: $header-line-height;
   // min-height: $header-line-height;
   width: 100%;
-  // border-top: $header-border-top-width solid $action-color;
+  border-top: $header-border-top-width solid $action-color;
   border-bottom: $base-border;
   z-index: $header-z-index;
   transition: padding $base-duration $base-timing;
   padding: $header-padding 0;
-
-  // &--is-maximized {
-  //   padding: $header-padding--max 0;
-  // }
-}
-
-.logo {
-  // float: left;
-  // padding-left: $header-padding;
-  // display: none;
-  //
-  // @include grid-media($medium) {
-  //   display: inline-block;
-  // }
 }
 
 .page-links {
   float: right;
-  // padding-right: $header-padding;
 
   li {
     display: inline-block;
@@ -67,20 +52,6 @@ $main-padding-top: calc(#{$header-line-height} + #{2 * $header-padding} + #{$bas
   //   }
   // }
 }
-
-// .emergency-phone {
-//   color: $action-color;
-//   font-weight: $base-font-weight--bold;
-//   text-align: center;
-// }
-
-// .timeline {
-//   display: none;
-//
-//   @include grid-media($large) {
-//     display: inline;
-//   }
-// }
 
 main {
   padding-top: $main-padding-top;
