@@ -1,11 +1,14 @@
 .hero {
+  $hero-min-height: 40em;
+  $hero-content-max-width: 48em;
   $hero-content-padding-bottom: 7 * $base-spacing;
   $hero-content-padding-left: 4 * $base-spacing;
+  $hero-content-button-max-width: 280px;
 
   background: url('/assets/images/bg_hero.jpg');
   background-position: bottom;
   background-size: cover;
-  min-height: 40em;
+  min-height: $hero-min-height;
   position: relative;
 
   align-items: center;
@@ -51,11 +54,11 @@
     @include grid-media($large) {
       @include grid-push(1);
       text-align: left;
-      max-width: 50em; // 800px
+      max-width: $hero-content-max-width;
     }
 
     .home & .button {
-      min-width: 280px;
+      min-width: $hero-content-button-max-width;
     }
   }
 

@@ -1,0 +1,24 @@
+title: Seite
+
+pages: false
+files: false
+options:
+  preview: true
+  status: false
+  template: false
+  url: false
+  delete: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+  intro_heading:
+    label: Einleitung (Überschrift)
+    type:  text
+  intro:
+    label: Einleitung (Text)
+    type:  textarea
+  text:
+    label: Text
+    type:  textarea

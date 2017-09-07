@@ -2,10 +2,9 @@
 
   <div class="hero">
     <div class="hero-content">
-      <h1>Willkommen bei Seiring & Seiring.</h1>
+      <h1><?= $page->intro_heading() ?></h1>
       <p class="lead">
-        Gemeinsam finden wir professionelle Antworten auf Ihre rechtlichen Fragen.<br>
-        Wir nehmen uns Zeit für Ihr Anliegen, sprechen Sie uns an!
+        <?= $page->intro() ?>
       </p>
       <p class="more-options">
         <a class="button" href="mailto:<?= $site->mail() ?>">
@@ -52,7 +51,7 @@
       </div>
       <div class="center">
         <p class="lead">
-          <strong>Sie sind sich bei der Einordnung unsicher?</strong>
+          <strong><?= $page->text() ?></strong>
         </p>
         <a class="button" href="<?= page('unsere-leistungen')->url() ?>">Wir sind behilflich →</a>
       </div>
