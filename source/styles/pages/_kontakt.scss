@@ -2,9 +2,7 @@ $overlay-opacity: 0.6;
 $map-height: 500px;
 
 .contact {
-  background-image: url('/assets/images/bg_contact.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: $light-gray;
 
   &-block {
     padding: 3 * $base-spacing 1.5 * $base-spacing;

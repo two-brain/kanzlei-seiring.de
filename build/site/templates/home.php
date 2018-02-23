@@ -73,39 +73,6 @@
     </div>
   </div>
 
-  <div id="<?= page('forschung-und-lehre')->uid() ?>" class="news section">
-    <div class="grid-container">
-      <div class="news-intro">
-        <header class="section-header">
-          <h4><?= page('forschung-und-lehre')->text_subheading() ?></h4>
-          <h2><?= page('forschung-und-lehre')->text_heading() ?></h2>
-        </header>
-        <div class="clearfix">
-          <?= page('forschung-und-lehre')->text()->kt() ?>
-          <a class="button" href="<?= page('forschung-und-lehre')->url() ?>">Zum Archiv →</a>
-        </div>
-      </div>
-      <div class="news-list">
-        <div class="blog-list">
-          <?php foreach(page('forschung-und-lehre')->children()->visible()->flip()->limit(2) as $article) : ?>
-            <a class="blog-item blog-item--is-bordered" href="<?= $article->url() ?>">
-              <div class="blog-date">
-                <time datetime="<?= $article->date('%Y-%m-%d') ?>">
-                  <?= $article->date('%d'); ?><br>
-                  <span><?= $article->date('%b'); ?></span>
-                </time>
-              </div>
-              <div class="blog-body">
-                <h3 class="blog-title"><?= $article->title()->html() ?></h3>
-                <?= $article->intro()->kirbytext() ?>
-              </div>
-            </a>
-          <?php endforeach ?>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div id="<?= page('kontakt')->uid() ?>" class="contact section">
     <div class="grid-container">
       <div class="contact-block">
