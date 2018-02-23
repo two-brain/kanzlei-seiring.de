@@ -42,13 +42,14 @@ Skills:
     elit. Lorem ipsum dolor sit amet
     consectetur adipisicing elit.
 - 
-  title: International unterwegs
+  title: Weltoffen und wortgewandt
   description: |
-    Wir bieten ihnen rechtliche Hilfe neben Deutsch auch in:
-    
-    - Englisch
-    - Französisch
-    - Spanisch
+    Rechtliche Fragestellungen machen auch vor
+    sprachlichen Hindernissen nicht halt - damit
+    Sie stets den Überblick behalten, informieren
+    wir sie bei Bedarf auch auf Englisch, Französisch
+    oder .. Spanisch! ¿En qué le puedo ayudar?
+
 - 
   title: Zu Ihrer Zufriedenheit
   description: "Lorem Ipsum Zufriedenheit. Anwalt.de nur Fünf-Sterne-Bewertungen, so wird's gemacht! hallo"
