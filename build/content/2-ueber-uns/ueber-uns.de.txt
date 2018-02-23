@@ -1,4 +1,4 @@
-Title: Über uns
+Title: Kanzlei &  Team
 
 ----
 
@@ -6,11 +6,11 @@ Text: Einleitende Worte zur Kanzlei
 
 ----
 
-Intro-heading: Die Kanzlei, die Kanzlei, die hat immer Recht
+Intro-heading: Wir sind für Sie da.
 
 ----
 
-Intro: und es bleibet dabei!
+Intro: Der persönliche Kontakt mit unseren Mandanten ist uns wichtig. Ihre Angelegenheiten hingegen behandeln wir diskret.
 
 ----
 
@@ -89,3 +89,7 @@ Team:
     adipiscing elit. Aenean ut auctor magna.
     Vivamus in porttitor enim.
   position: Rechtsanwaltsfachangestellte
+
+----
+
+Bg: dummy4.jpg

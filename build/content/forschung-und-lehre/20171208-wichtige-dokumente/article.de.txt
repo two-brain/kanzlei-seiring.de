@@ -1,0 +1,13 @@
+Title: Wichtige Dokumente!
+
+----
+
+Intro: Dies ist eine Einleitung. Hier stehen Dinge wie: "Hallo! Die neueste Ausgabe der Zeitschrift HRRS, die ich zur **gestrigen Vorlesung** mitbringen wollte, ist nun endlich verfügbar!
+
+----
+
+Text: Lange versprochen, nun ist es endlich soweit: Die aktuelle Ausgabe der (file: hrrs-7-17.pdf text: Onlinezeitschrift für Höchstrichterliche Rechtsprechung zum Strafrecht) steht bereit zum Download.
+
+----
+
+Date: 2017-12-08

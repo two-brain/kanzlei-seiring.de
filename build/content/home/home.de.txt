@@ -1,9 +1,20 @@
-Title: Start
+Title: Willkommen!
 
 ----
 
-Text: Hallo!
+Text: Sie sind sich bei der Einordnung unsicher?
 
 ----
 
 Intro: 
+
+Gemeinsam finden wir professionelle Antworten auf Ihre rechtlichen Fragen.
+Wir nehmen uns Zeit für Ihr Anliegen, sprechen Sie uns an!
+
+----
+
+Intro-heading: Willkommen bei Seiring & Seiring.
+
+----
+
+Bg: Chess - @mvdheuvel.jpg

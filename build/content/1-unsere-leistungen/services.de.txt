@@ -1,4 +1,4 @@
-Title: Leistungen
+Title: Themen & Leistungen
 
 ----
 
@@ -6,13 +6,17 @@ Text: In den unten genannten Bereichen sind wir Ihnen bei rechtlichen Fragen ger
 
 ----
 
-Intro: Und das wirklich jeden Tag! Wahl-, Pflichtverteidigung, jede Prozesssituation, AG/LG/OLG! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Intro: Profitieren Sie von unserer jahrelangen Praxis. Wir halten Ihnen den Rücken frei, damit Sie Zeit für die wirklich wichtigen Dinge haben.
 
 ----
 
-Carousel: 
+Bg: bg2.jpg
 
-- 
+----
+
+Carousel:
+
+-
   title: Strafrecht
   image: services_balance.png
   long: >
@@ -27,7 +31,7 @@ Carousel:
     adipiscing elit. Proin sodales nunc
     purus, tempor venenatis lorem aliquet
     sit amet.
-- 
+-
   title: Verkehrsrecht
   image: services_traffic.png
   long: >
@@ -42,7 +46,7 @@ Carousel:
     adipiscing elit. Proin sodales nunc
     purus, tempor venenatis lorem aliquet
     sit amet.
-- 
+-
   title: Ehescheidung
   image: services_mediation.png
   long: >
@@ -57,7 +61,7 @@ Carousel:
     adipiscing elit. Proin sodales nunc
     purus, tempor venenatis lorem aliquet
     sit amet.
-- 
+-
   title: 'Zivil- / Vertragsrecht'
   image: services_contract.png
   long: >
@@ -72,7 +76,7 @@ Carousel:
     adipiscing elit. Proin sodales nunc
     purus, tempor venenatis lorem aliquet
     sit amet.
-- 
+-
   title: Jugendstrafrecht
   image: services_verdict.png
   long: >
@@ -87,7 +91,7 @@ Carousel:
     adipiscing elit. Proin sodales nunc
     purus, tempor venenatis lorem aliquet
     sit amet.
-- 
+-
   title: Ordnungswidrigkeiten
   image: services_law-book.png
   long: >
@@ -105,7 +109,7 @@ Carousel:
 
 ----
 
-Intro-heading: Wir machen echt viel.
+Intro-heading: Rechtsberatung aus Erfahrung.
 
 ----
 
@@ -117,13 +121,13 @@ Text-subheading: Ihr Partner in Rechtsfragen
 
 ----
 
-Engagement: 
+Engagement:
 
-- 
+-
   text: Ausbildung von Studenten / Referendaren
-- 
+-
   text: 'Dozententätigkeit an der DHBW Lörrach & FH Ludwigsburg'
-- 
+-
   text: 'Regelmäßige Fort- und Weiterbildungsmaßnahmen'
-- 
+-
   text: 'Mitgliedschaften: Freiburger Anwaltverein, Deutscher Anwaltverein, Strafverteidiger Baden Württemberg'
