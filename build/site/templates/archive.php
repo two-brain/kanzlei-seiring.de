@@ -10,7 +10,7 @@
       </header>
       <div class="blog-list">
         <?= $page->text()->kt() ?>
-        <?php foreach(page('forschung-und-lehre')->children()->visible()->flip() as $article) : ?>
+        <?php foreach($page->children()->visible()->flip() as $article) : ?>
           <a class="blog-item blog-item--is-bordered" href="<?= $article->url() ?>">
             <div class="blog-date">
               <time datetime="<?= $article->date('%Y-%m-%d') ?>">

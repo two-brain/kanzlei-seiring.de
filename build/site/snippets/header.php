@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php header('Content-type: text/html; charset=utf-8'); ?>
 <html class="no-js" lang="<?= $site->language() ?>">
 
   <?php snippet('head') ?>

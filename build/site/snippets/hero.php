@@ -1,4 +1,4 @@
-<div class="hero">
+<div class="hero" style="background-image: url('<?= $page->bg()->toFile()->thumb(array('width' => 1440, 'height' => 960, 'quality' => 85, 'crop' => true))->url() ?>')">
   <div class="hero-content">
     <h1><?= $page->intro_heading() ?></h1>
     <p class="lead">
