@@ -26,21 +26,21 @@
     justify-content: flex-start;
   }
 
-  [data-namespace="unsere-leistungen"] & {
-    background-image: url('/assets/images/bg1.jpg');
-  }
-
-  [data-namespace="ueber-uns"] & {
-    background-image: url('/assets/images/bg4.jpg'); // https://unsplash.com/@shotbyjames
-  }
-
-  [data-namespace="forschung-und-lehre"] & {
-    background-image: url('/assets/images/bg2.jpg');
-  }
-
-  [data-namespace="kontakt"] & {
-    background-image: url('/assets/images/bg5.jpg'); // https://unsplash.com/@mvdheuvel
-  }
+  // [data-namespace="unsere-leistungen"] & {
+  //   background-image: url('/assets/images/bg1.jpg');
+  // }
+  //
+  // [data-namespace="ueber-uns"] & {
+  //   background-image: url('/assets/images/bg4.jpg'); // https://unsplash.com/@shotbyjames
+  // }
+  //
+  // [data-namespace="forschung-und-lehre"] & {
+  //   background-image: url('/assets/images/bg2.jpg');
+  // }
+  //
+  // [data-namespace="kontakt"] & {
+  //   background-image: url('/assets/images/bg5.jpg'); // https://unsplash.com/@mvdheuvel
+  // }
 
   &-content {
     // bottom: 0;
