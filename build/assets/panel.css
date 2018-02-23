@@ -1,0 +1,13 @@
+.sidebar-list .invisible {
+  color: #666;
+}
+
+.tab-nav li.active {
+  border-bottom-color: #8dae28;
+}
+
+/* Bigger modals */
+.modal-content-large {
+  max-width: 64em;
+}
+
