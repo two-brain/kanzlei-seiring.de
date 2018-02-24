@@ -99,4 +99,9 @@ $back-top-bullet-size: 3.5em;
   height: $back-top-bullet-size;
   padding: $back-top-bullet-size / 6 $back-top-bullet-size / 4 $back-top-bullet-size / 4;
   width: $back-top-bullet-size;
+
+  &:hover,
+  &:focus {
+    background: $footer-background;
+  }
 }

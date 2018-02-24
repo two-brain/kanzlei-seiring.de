@@ -3,7 +3,7 @@
 
   <?php snippet('head') ?>
 
-  <body id="start">
+  <body>
     <header id="js-header" class="site-header">
       <div class="grid-container">
         <nav class="page-links">

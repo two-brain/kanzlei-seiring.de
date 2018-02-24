@@ -1,7 +1,7 @@
             <footer id="js-footer" class="site-footer">
-              <a class="back-top" href="#start">
+              <button id="back-to-top" class="back-top" href="#">
                 <?= (new Asset("assets/images/footer_back-top.svg"))->content() ?>
-              </a>
+              </button>
               <div class="site-footer--primary">
                 <?= (new Asset("assets/images/logo/logo--dark.svg"))->content() ?>
                 <hr>

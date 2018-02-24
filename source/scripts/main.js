@@ -7,7 +7,7 @@
 import Barba from 'barba.js';
 import zenscroll from 'zenscroll';
 import { tns } from 'tiny-slider/src/tiny-slider.module';
-
+import NProgress from 'nprogress';
 
 /*
  * Initializing all the things
@@ -195,8 +195,12 @@ Barba.Prefetch.init();
 
 Barba.Dispatcher.on('linkClicked', function(element) {
 
-  const header = document.getElementById('js-header');
+  console.log(element);
 
+  NProgress.start();
+  NProgress.inc();
+
+  const header = document.getElementById('js-header');
   const activeNavElements = header.getElementsByClassName('is-active');
 
   for (let i = 0; i < activeNavElements.length; i += 1) {
@@ -216,17 +220,19 @@ Barba.Dispatcher.on('linkClicked', function(element) {
   }
 });
 
-// Barba.Dispatcher.on('initStateChange', function() {
-//
-// });
+document.getElementById('back-to-top').addEventListener('click', function(e) {
+  zenscroll.toY(0);
+});
+
+Barba.Dispatcher.on('initStateChange', function() {
+  NProgress.set(0.5);
+});
 
 Barba.Dispatcher.on('newPageReady', function() {
-  // zenscroll.toY(0);
-  // window.scrollTo(0, 0);
-
+  NProgress.set(0.8);
 });
 
 Barba.Dispatcher.on('transitionCompleted', function() {
   window.scrollTo(0, 0);
-  // zenscroll.toY(0);
+  NProgress.done();
 });
