@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <title><?= $page->title()->html() ?> | <?= $site->title()->html() ?></title>
+  <?= snippet('partials/seo.php') ?>
 
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600' rel='stylesheet' type='text/css'>
 
@@ -26,12 +26,6 @@
      src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js">
    </script>
 
-
-
   <?= css('assets/styles/main.css'); ?>
-
-  <?php if(c::get('piwik_enable') == true) : ?>
-    <?php snippet('piwik') ?>
-  <?php endif ?>
 
 </head>
