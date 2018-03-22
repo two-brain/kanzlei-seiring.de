@@ -13,18 +13,13 @@
     </div>
     <?php if($page->hasFiles()) : ?>
     <div class="grid-container center">
-      <?= (new Asset("assets/images/icons/cloud.svg"))->content() ?>
+      <?= $cloud ?>
       <ul>
-        <?php
-          $files = $page->files()->filterBy('type', 'document')->sortBy('extension');
-          foreach($files as $file) :
-        ?>
-        <li>
-          <a class="no-barba" href="<?= $file->url() ?>">
-            <?= $file->filename() ?>
-            (<?= $file->niceSize() ?>)
-          </a>
-        </li>
+        <?php foreach($files as $file) : ?>
+        <li><a class="no-barba" href="<?= $file->url() ?>">
+          <?= $file->filename() ?>
+          (<?= $file->niceSize() ?>)
+        </a></li>
         <?php endforeach ?>
       </ul>
     </div>

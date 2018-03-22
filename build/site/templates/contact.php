@@ -4,29 +4,32 @@
 
   <div id="<?= $page->uid() ?>" class="section">
     <div class="grid-container">
-      <header class="section-header">
-        <h4><?= $page->text_subheading() ?></h4>
-        <h2><?= $page->text_heading() ?></h2>
-      </header>
+      <?php snippet('partials/section-header', $page) ?>
       <div class="contact-intro">
         <?= $page->text()->kt() ?>
       </div>
       <div class="contact-info">
+        <?php if ($address = $site->address()) : ?>
         <address>
-          <?= $site->address()->kt() ?>
+          <?= $address->kt() ?>
         </address>
+        <?php endif ?>
+        <?php if ($phone || $fax) : ?>
         <p>
-          Telefon: <?= $site->fon() ?><br>
-          Telefax<?= $site->fax() ?>
+          <?php e($phone, 'Telefon: ' . $phone . '<br>') ?>
+          <?php e($fax, 'Telefax: ' . $fax) ?>
         </p>
+        <?php endif ?>
+        <?php if (file_exists($vcard)) : ?>
         <p>
-          <a class="no-barba" href="<?= $site->vcard()->toFile()->url() ?>" target="_blank">
-            <?= (new Asset('assets/images/icons/download.svg'))->content() ?>
+          <a class="no-barba" href="<?php $vcard->url() ?>" target="_blank">
+            <?= $vcardImage ?>
             <strong class="thick">
-              Visitenkarte als Download
+              <?= $page->vcard_text() ?>
             </strong>
           </a>
         </p>
+        <?php endif ?>
       </div>
     </div>
     <div class="send-mail">
@@ -46,15 +49,7 @@
         <h4><?= $page->form_subheading() ?></h4>
         <h2><?= $page->form_heading() ?></h2>
       </header>
-      <form class="form">
-        <?php snippet('form-fields'); ?>
-        <div class="center">
-          <button class="button" type="submit">
-            <?= (new Asset('assets/images/icons/send.svg'))->content() ?>
-            Absenden
-          </button>
-        </div>
-      </form>
+      <?php snippet('partials/contact-form') ?>
     </div>
   </div>
 
