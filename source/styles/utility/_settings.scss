@@ -17,7 +17,7 @@ $heading-line-height: 1.2;
 // Other Sizes
 $base-border-radius: 0;
 $border-radius-round: 5px;
-$base-spacing: $base-line-height * 1em;
+$base-spacing: $base-line-height * 1rem;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
@@ -52,6 +52,7 @@ $base-duration: 150ms;
 $base-timing: linear;
 
 // Breakpoints
+$small-screen: 480px;
 $sixfourty-screen: 640px;
 $medium-screen: 768px;
 $large-screen: 960px;
@@ -64,6 +65,12 @@ $neat-grid: (
   columns: 12,
   gutter: $gutter,
   media: $xlarge-screen
+);
+
+$small: (
+  columns: 12,
+  gutter: $gutter-small,
+  media: $small-screen
 );
 
 $sixfourty: (

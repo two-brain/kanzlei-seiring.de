@@ -38,7 +38,7 @@
   &.transparent {
     background: transparent;
     border: 0.125em solid $white;
-    padding: $small-spacing + 0.056em $base-spacing + 0.056em;
+    padding: $small-spacing + 0.056rem $base-spacing + 0.056rem;
     transition: color background-color $base-duration $base-timing;
 
     &:hover,

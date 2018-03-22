@@ -8,26 +8,19 @@ import Barba from 'barba.js';
 import zenscroll from 'zenscroll';
 import { tns } from 'tiny-slider/src/tiny-slider.module';
 import NProgress from 'nprogress';
+import Accordions from 'a11y-accordion-component';
 
-/*
- * Initializing all the things
- */
-
-window.onload = function() {
-  let className = '';
-  let html = '';
-  html = document.documentElement;
-  className = html.className.replace('no-js', 'js');
-  html.className = className;
-};
-
+NProgress.configure({
+  showSpinner: false,
+  speed: 500
+});
 
 /*
  * Setting up barba.js
  */
 
 // Variables
-Barba.Pjax.Dom.wrapperId = 'js-content';
+Barba.Pjax.Dom.wrapperId = 'barba';
 Barba.Pjax.Dom.containerClass = 'wrapper';
 Barba.transitionLength = 500;
 
@@ -119,6 +112,9 @@ var Transition = Barba.BaseTransition.extend({
   }
 });
 
+Barba.Pjax.getTransition = function() { return Transition; };
+
+
 // Views
 const HomeView = Barba.BaseView.extend({
   namespace: 'home',
@@ -158,14 +154,36 @@ const HomeView = Barba.BaseView.extend({
 
 HomeView.init();
 
-const MapView = Barba.BaseView.extend({
-  namespace: 'kontakt',
+const ServicesView = Barba.BaseView.extend({
+  namespace: 'fachgebiete-und-leistungen',
+  onEnter: function() {
+    Accordions.init();
+    Accordions.render('accordion', {
+      isMultiSelectable: true,
+      isCollapsible: true,
+    });
+  },
+  onEnterCompleted: function() {
+    // The Transition has just finished.
+  },
+  onLeave: function() {
+    // A new Transition toward a new page has just started.
+  },
+  onLeaveCompleted: function() {
+    Accordions.destroy('accordion');
+  }
+});
+
+ServicesView.init();
+
+const ContactView = Barba.BaseView.extend({
+  namespace: 'anfahrt-und-kontakt',
   onEnter: function() {
     // The new Container is ready and attached to the DOM.
-    const layer = new L.StamenTileLayer('watercolor');
+    const layer = new L.StamenTileLayer('terrain');
     const seiring_map = L.map('map_canvas',{
       scrollWheelZoom: false
-    }).setView([47.98905, 7.85686], 100).addLayer(layer);
+    }).setView([47.98905, 7.85686], 17).addLayer(layer);
     // }).setView([47.98905, 7.85686], 19);
 
     L.marker([47.98905, 7.85686]).addTo(seiring_map)
@@ -187,52 +205,46 @@ const MapView = Barba.BaseView.extend({
   }
 });
 
-MapView.init();
+ContactView.init();
 
-Barba.Pjax.getTransition = function() { return Transition; };
-Barba.Pjax.start();
-Barba.Prefetch.init();
+/*
+ * Initializing all the things
+ */
 
-Barba.Dispatcher.on('linkClicked', function(element) {
+window.onload = function() {
+  let className = '';
+  let html = '';
+  html = document.documentElement;
+  className = html.className.replace('no-js', 'js');
+  html.className = className;
 
-  console.log(element);
-
-  NProgress.start();
-  NProgress.inc();
-
-  const header = document.getElementById('js-header');
-  const activeNavElements = header.getElementsByClassName('is-active');
-
-  for (let i = 0; i < activeNavElements.length; i += 1) {
-    activeNavElements[i].classList.remove('is-active');
+  let back = document.getElementById('back-to-top');
+  function scrollTop() {
+    zenscroll.toY(0);
   }
-  // var mobileMenu = document.querySelector('.navigation-links');
-  // mobileMenu.classList.add('hidden');
 
-  const elementLink = element.getAttribute('href');
-  const navLinkToAddActive = header.querySelector(`a[href="${elementLink}"]`);
+  back.addEventListener('click', scrollTop);
 
-  try {
-    navLinkToAddActive.classList.add('is-active');
+  Barba.Pjax.start();
+  Barba.Prefetch.init();
 
-  } catch (e) {
-    console.log(e);
-  }
-});
+  Barba.Dispatcher.on('linkClicked', function(element) {
+    NProgress.start();
+    document.getElementById('back-to-top').removeEventListener('click', scrollTop);
+  });
 
-document.getElementById('back-to-top').addEventListener('click', function(e) {
-  zenscroll.toY(0);
-});
+  Barba.Dispatcher.on('initStateChange', function() {
+    NProgress.inc();
+  });
 
-Barba.Dispatcher.on('initStateChange', function() {
-  NProgress.set(0.5);
-});
+  Barba.Dispatcher.on('newPageReady', function() {
+    NProgress.set(0.8);
+  });
 
-Barba.Dispatcher.on('newPageReady', function() {
-  NProgress.set(0.8);
-});
+  Barba.Dispatcher.on('transitionCompleted', function() {
+    NProgress.done();
+    window.scrollTo(0, 0);
+    document.getElementById('back-to-top').addEventListener('click', scrollTop);
+  });
 
-Barba.Dispatcher.on('transitionCompleted', function() {
-  window.scrollTo(0, 0);
-  NProgress.done();
-});
+};

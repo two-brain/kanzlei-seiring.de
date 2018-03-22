@@ -1,40 +1,18 @@
-$header-z-index: $base-z-index + 10;
-$header-border-top-width: 3px;
 $header-logo-height: 50px;
-$header-line-height: $header-logo-height;
-$header-padding: 1.5em;
-// $header-padding--max: 1.6 * $header-padding;
-$main-padding-top: calc(#{$header-line-height} + #{2 * $header-padding} + #{$header-border-top-width} + #{$base-border-width});
-// $header-secondary-height: 40px;
+$macro-navigation-line-height: $header-logo-height;
+$micro-navigation-line-height: $macro-navigation-line-height / 2;
+$macro-navigation-padding--small: $base-spacing $small-spacing $small-spacing;
+$macro-navigation-padding--big: $base-spacing;
+$micro-navigation-padding--small: $small-spacing;
+$micro-navigation-padding--big: $small-spacing $base-spacing;
 
 .site-header {
-  background: $white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  line-height: $header-line-height;
-  // min-height: $header-line-height;
-  width: 100%;
-  border-top: $header-border-top-width solid $action-color;
-  border-bottom: $base-border;
-  z-index: $header-z-index;
-  transition: padding $base-duration $base-timing;
-  padding: $header-padding 0;
-}
-
-.page-links {
-  float: right;
-
-  li {
-    display: inline-block;
-
-    + li {
-      margin-left: $header-padding / 2;
-    }
-  }
+  position: relative;
+  z-index: 10;
+  @include card(1);
 
   a {
-    display: inline-block;
+    display: inherit;
     font-weight: 400;
     color: $dark-gray;
 
@@ -45,14 +23,62 @@ $main-padding-top: calc(#{$header-line-height} + #{2 * $header-padding} + #{$hea
     }
   }
 
-  //
-  // .is-first {
-  //   @include grid-media($medium) {
-  //     display: none;
-  //   }
-  // }
+  li {
+    display: inline-block;
+
+    + li {
+      margin-left: $base-spacing / 2;
+    }
+  }
 }
 
-main {
-  padding-top: $main-padding-top;
+.macro-navigation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: $macro-navigation-line-height;
+  padding: $macro-navigation-padding--small;
+
+  @include grid-media($medium) {
+    flex-direction: row;
+    padding: $macro-navigation-padding--big;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  margin-bottom: $small-spacing;
+
+  @include grid-media($medium) {
+    margin-bottom: 0;
+  }
+}
+
+.micro-navigation {
+  font-size: 14px;
+  line-height: $micro-navigation-line-height;
+  border-bottom: $base-border;
+  display: flex;
+  justify-content: space-between;
+  padding: $micro-navigation-padding--small;
+
+  @include grid-media($medium) {
+    padding: $micro-navigation-padding--big;
+  }
+}
+
+.bold-blue {
+  color: $action-color;
+  font-weight: 700;
+}
+
+.language-navigation {
+  margin-left: $base-spacing / 3;
+  text-transform: uppercase;
+  display: inline;
+
+  a {
+    color: $medium-gray;
+  }
 }

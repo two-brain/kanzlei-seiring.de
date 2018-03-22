@@ -5,50 +5,22 @@
   $hero-content-padding-left: 4 * $base-spacing;
   $hero-content-button-max-width: 280px;
 
-  background: url('/assets/images/bg_hero.jpg');
-  background-position: bottom;
   background-size: cover;
+  background-position: bottom;
   min-height: $hero-min-height;
   position: relative;
 
   align-items: center;
-  // background: image-url("background-image.png");
-  // background-position: right;
-  // background-size: none;
   display: flex;
   justify-content: center;
-  // min-height: 25em;
   padding: 0 $gutter;
 
   @include grid-media($large) {
-    // background-position: right;
-    background-size: cover;
     justify-content: flex-start;
   }
 
-  // [data-namespace="unsere-leistungen"] & {
-  //   background-image: url('/assets/images/bg1.jpg');
-  // }
-  //
-  // [data-namespace="ueber-uns"] & {
-  //   background-image: url('/assets/images/bg4.jpg'); // https://unsplash.com/@shotbyjames
-  // }
-  //
-  // [data-namespace="forschung-und-lehre"] & {
-  //   background-image: url('/assets/images/bg2.jpg');
-  // }
-  //
-  // [data-namespace="kontakt"] & {
-  //   background-image: url('/assets/images/bg5.jpg'); // https://unsplash.com/@mvdheuvel
-  // }
-
   &-content {
-    // bottom: 0;
     color: $white;
-    // padding-bottom: $hero-content-padding-bottom;
-    // padding-left: $hero-content-padding-left;
-    // position: absolute;
-    // max-width: 20em;
     text-align: center;
 
     @include grid-media($large) {
@@ -61,6 +33,10 @@
       min-width: $hero-content-button-max-width;
     }
   }
+
+  .lead {
+    font-weight: 400;
+  }  
 
   &-bottom {
     background: transparent url('/assets/images/hero_bottom.svg') repeat-x center 30px;
