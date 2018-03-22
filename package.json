@@ -26,6 +26,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "a11y-accordion-component": "^1.2.5",
     "barba-transitions": "S1SYPHOS/barba-transitions",
     "barba.js": "^1.0.0",
     "leaflet-control-geocoder": "^1.5.8",

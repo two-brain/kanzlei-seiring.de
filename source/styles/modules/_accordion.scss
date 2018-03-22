@@ -1,0 +1,61 @@
+$accordion-padding: $base-spacing;
+$accordion-image-dimension: 36px;
+$accordion-image-transition-duration: 2 * $base-duration;
+$accordion-height-transition-duration: $accordion-image-transition-duration;
+$accordion-panel-transition-duration: 2 * $accordion-height-transition-duration;
+$accordion-panel-padding-right: calc(#{$base-spacing} + #{$accordion-image-dimension});
+
+.accordion {
+}
+
+.accordion-trigger {
+  display: flex;
+  justify-content: space-between;
+  padding: $accordion-padding 0;
+  color: $action-color;
+  cursor: pointer;
+  outline: 0;
+
+  &:hover {
+    color: $secondary-color;
+  }
+
+  &[aria-expanded="true"] {
+    color: $secondary-color;
+
+    .accordion-image {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.accordion-title {
+  margin: 0;
+  font-size: 32px;
+  font-variant: small-caps;
+  font-weight: 400;
+}
+
+.accordion-image {
+  transition: transform $accordion-image-transition-duration;
+}
+
+.accordion-panel {
+  padding-right: $accordion-panel-padding-right;
+  outline: 0;
+
+  &[aria-hidden="true"] {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: max-height $accordion-height-transition-duration, visibility $accordion-panel-transition-duration $accordion-panel-transition-duration, opacity $accordion-panel-transition-duration $accordion-panel-transition-duration;
+  }
+
+  &[aria-hidden="false"] {
+    max-height: 50rem;
+    visibility: visible;
+    opacity: 1;
+    transition: max-height 2 * $accordion-height-transition-duration, visibility 0s, opacity 0s;
+  }
+}
