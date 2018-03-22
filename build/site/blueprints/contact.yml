@@ -1,7 +1,6 @@
 title: Kontakt
 
 pages: false
-files: false
 options:
   preview: true
   status: false
@@ -14,10 +13,7 @@ fields:
     label: Title
     type:  text
     width: 2/3
-  bg:
-    label: Hintergrund
-    type: image
-    width: 1/3
+  hero: hero
   intro_heading:
     label: Einleitung (Überschrift)
     type:  text
@@ -38,6 +34,16 @@ fields:
   send_mail:
     label: Hinweis auf Mail
     type:  text
+    width: 1/2
+  vcard_text:
+    label: Hinweis auf Visitenkarte
+    type: text
+    width: 3/4
+  vcard:
+    label: Visitenkarte
+    type:  select
+    options: files
+    width: 1/4
   form_heading:
     label: Kontaktformular (Überschrift)
     type:  text

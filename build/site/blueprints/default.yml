@@ -1,7 +1,6 @@
 title: Default
 
 pages: false
-files: false
 options:
   preview: true
   status: true

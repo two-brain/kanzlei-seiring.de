@@ -2,7 +2,7 @@ label: Fachgebiete
 type: structure
 modalsize: large
 entry: >
-  <img src="/content/1-unsere-leistungen/{{image}}"><br>
+  <img src="/content/1-fachgebiete-und-leistungen/{{image}}"><br>
   <strong>{{title}}</strong><br>
   {{short}}<br>
 fields:

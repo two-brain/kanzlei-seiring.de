@@ -2,7 +2,7 @@ label: Team
 type: structure
 modalsize: large
 entry: >
-  <img src="/content/2-ueber-uns/{{image}}"><br>
+  <img src="/content/2-kanzlei-und-team/{{image}}"><br>
   <strong>{{title}}</strong><br>
   <em>{{position}}</em><br>
   {{description}}<br>
