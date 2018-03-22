@@ -10,24 +10,24 @@ c::set('languages', array(
     'url'     => '/',
     'locale'  => 'de_DE',
   ),
-  array(
-    'code'    => 'fr',
-    'name'    => 'Français',
-    'url'     => '/fr',
-    'locale'  => 'fr_FR',
-  ),
+  // array(
+  //   'code'    => 'fr',
+  //   'name'    => 'Français',
+  //   'url'     => '/fr',
+  //   'locale'  => 'fr_FR',
+  // ),
   array(
     'code'    => 'en',
     'name'    => 'English',
     'url'     => '/en',
     'locale'  => 'en_GB',
   ),
-  array(
-    'code'    => 'es',
-    'name'    => 'Español',
-    'url'     => '/es',
-    'locale'  => 'es_ES',
-  ),
+  // array(
+  //   'code'    => 'es',
+  //   'name'    => 'Español',
+  //   'url'     => '/es',
+  //   'locale'  => 'es_ES',
+  // ),
 ));
 
 c::set('language.detect', false);

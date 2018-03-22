@@ -15,3 +15,5 @@ include kirby()->roots()->config() . '/media.php';
 
 c::set('debug', true);
 c::set('plugin.html.minifier.active', false);
+
+c::set('panel.stylesheet', 'assets/panel.css');
