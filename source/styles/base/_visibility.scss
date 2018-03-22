@@ -1,0 +1,15 @@
+.inline-for-large {
+  display: none;
+
+  @include grid-media($large) {
+    display: inline;
+  }
+}
+
+.show-for-medium {
+  display: none;
+
+  @include grid-media($medium) {
+    display: inline-block;
+  }
+}
