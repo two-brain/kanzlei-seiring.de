@@ -6,17 +6,9 @@ Mail: info@kanzlei-seiring.de
 
 ----
 
-Footer: 
+Testimonials:
 
-----
-
-Phone: (0761) 72 523
-
-----
-
-Testimonials: 
-
-- 
+-
   name: P.F.
   date: 07.05.2014
   source: anwalt.de
@@ -29,7 +21,7 @@ Testimonials:
     Empfehlung!"
   url: >
     https://www.anwalt.de/seiring/bewertungen.php
-- 
+-
   name: T.K.
   date: 04.04.2016
   source: anwalt.de
@@ -46,7 +38,7 @@ Lets-help: Wir sind an Ihrer Seite, wenn es darauf ankommt.
 
 ----
 
-Address: 
+Address:
 
 Seiring & Seiring Rechtsanwälte
 Dreikönigsstraße 12
@@ -54,11 +46,11 @@ Dreikönigsstraße 12
 
 ----
 
-Fon: 0761 - 725 23
+Fon: (0761) 725 23
 
 ----
 
-Fax: 0761 - 736 31
+Fax: (0761) 736 31
 
 ----
 
@@ -66,4 +58,4 @@ Quote: non ex regula ius sumatur, sed ex iure, quod est regula fiat.
 
 ----
 
-Vcard: Kanzlei-Seiring.vcf
+Fon-text: Ihr Anliegen in guten Händen

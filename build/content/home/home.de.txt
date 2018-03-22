@@ -17,4 +17,4 @@ Intro-heading: Willkommen bei Seiring & Seiring.
 
 ----
 
-Bg: Chess - @mvdheuvel.jpg
+Hero: kanzlei-seiring-und-seiring.jpg

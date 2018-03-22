@@ -1,0 +1,53 @@
+Title: Anfahrt & Kontakt
+
+----
+
+Text:
+
+Die Kanzlei befindet sich in Innenstadtnähe von Freiburg im schönen Altbauviertel Wiehre. Kostenlose Mandantenparkplätze stehen vor dem Haus zur Verfügung, mit der Straßenbahnlinie 1 erreichen Sie uns über die 200m entfernte Haltestelle "Brauerei Ganter".
+
+Die Sprechzeiten sind Montag bis Freitag von 8:30 bis 12:30 Uhr sowie 14:00 bis 17:00 Uhr. Freitag ist das Telefon bis 13:30 Uhr besetzt. Gerne können Termine außerhalb der Sprechzeiten vereinbart werden.
+
+----
+
+Intro-heading: Ihr Weg zu uns
+
+----
+
+Intro: Sie haben Fragen oder wünschen ein Beratungsgespräch? Dann sind Sie hier genau richtig - wir freuen uns, von Ihnen zu hören!
+
+----
+
+Text-heading: So erreichen Sie uns
+
+----
+
+Text-subheading: Anfahrt & Kontakt
+
+----
+
+Form-heading: Ausfüllen & los!
+
+----
+
+Form-subheading: Unverbindliche Anfrage
+
+----
+
+Send-mail: Senden Sie uns eine Mail oder nutzen Sie unser Kontaktformular!
+
+----
+
+Hero: anfahrt-und-kontakt.jpg
+
+----
+
+Download-text: Visitenkarte als Download
+
+----
+
+Vcard-text: Visitenkarte als Download
+
+----
+
+Vcard: Kanzlei-Seiring.vcf

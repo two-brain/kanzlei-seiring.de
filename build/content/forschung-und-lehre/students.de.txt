@@ -1,0 +1,29 @@
+Title: Forschung & Lehre
+
+----
+
+Text: Hier finden Sie Informationen und Ankündigungen zur laufenden Vorlesung. Außerdem stellen wir hier sämtliche im Unterricht verwendete Materialien für Studenten der DHBW Lörrach zur Verfügung.
+
+----
+
+Intro: Bildung ist die Fähigkeit, fast alles anhören zu können, ohne die Ruhe zu verlieren oder das Selbstvertrauen.
+
+----
+
+Intro-heading: Wenn man alle Gesetze studieren sollte, so hätte man gar keine Zeit, sie zu übertreten.
+
+----
+
+Text-heading: Für Studenten
+
+----
+
+Text-subheading: Alles rund ums Studium
+
+----
+
+Hero: forschung-und-lehre.jpg
+
+----
+
+Bg: forschung-und-lehre.jpg
