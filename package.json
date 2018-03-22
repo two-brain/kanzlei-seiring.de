@@ -29,11 +29,8 @@
     "a11y-accordion-component": "^1.2.5",
     "barba-transitions": "S1SYPHOS/barba-transitions",
     "barba.js": "^1.0.0",
-    "leaflet-control-geocoder": "^1.5.8",
-    "leaflet-routing-machine": "^3.2.8",
     "nprogress": "^0.2.0",
     "tiny-slider": "^2.6.0",
-    "turbolinks": "^5.1.1",
     "zenscroll": "^4.0.0"
   },
   "devDependencies": {
